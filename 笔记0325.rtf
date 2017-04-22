@@ -1,0 +1,467 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 STSongti-SC-Regular;
+\f3\fmodern\fcharset0 Courier;\f4\froman\fcharset0 Times-Roman;\f5\fnil\fcharset0 Verdana;
+\f6\fswiss\fcharset0 ArialMT;\f7\fnil\fcharset0 Menlo-Bold;\f8\fmodern\fcharset0 CourierNewPSMT;
+\f9\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red29\green133\blue25;\red77\green0\blue158;\red46\green13\blue110;
+\red68\green137\blue147;\red180\green0\blue98;\red32\green60\blue63;\red0\green11\blue255;\red32\green136\blue22;
+\red92\green38\blue153;\red110\green32\blue13;\red186\green0\blue17;\red67\green67\blue67;\red255\green238\blue149;
+\red21\green102\blue47;\red41\green34\blue32;\red38\green38\blue38;\red254\green254\blue239;\red74\green74\blue74;
+\red100\green56\blue32;\red35\green35\blue35;\red43\green43\blue43;\red0\green0\blue0;\red255\green255\blue255;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28380\viewh12700\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 1.\'ce\'a2\'d0\'c5\'b7\'d6\'cf\'ed\'cb\'f5\'c2\'d4\'cd\'bc\'b4\'f3\'d0\'a1\'d0\'a1\'d3\'da32k  \'b5\'ab\'ca\'c7\'b7\'d6\'cf\'ed\'ca\'a7\'b0\'dc\'b5\'c4  \'d2\'f2\'ce\'aa\'d3\'c3\'b5\'c4\'ca\'c7setThumImage\'b7\'bd\'b7\'a8\'bb\'e1\'b5\'bc\'d6\'c2\'bf\'c9\'c4\'dc\'b4\'f3\'d3\'da32k   \'a3\'ac\'b4\'a6\'c0\'ed\'b7\'bd\'b7\'a8 \'ca\'b9\'d3\'c3thumData\'b4\'ab\'b5\'dd\'cd\'bc\'c6\'ac\'ca\'fd\'be\'dd\'be\'cd\'bf\'c9\'d2\'d4\'c1\'cb\'a1\'a3
+\f1 \cf2 \CocoaLigature0 //
+\f0 \'bd\'e2\'be\'f6\'b6\'c1\'c8\'a1\'cd\'bc\'c6\'ac\'b5\'bc\'d6\'c2\'b4\'f3\'d3\'da
+\f1 32k
+\f0 \'b5\'c4\'ce\'ca\'cc\'e2
+\f1 \cf0 \
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+\cf0                 \cf3 NSData\cf0  *data = [\cf3 NSData\cf0  \cf4 dataWithContentsOfFile\cf0 :imagePath];\
+                message.\cf5 thumbData\cf0  = data;\
+\cf2 //                [message setThumbImage:[UIImage imageWithContentsOfFile:imagePath]];\
+\
+\cf0 2.
+\f0 \'b7\'d6\'cf\'ed\'cd\'bc\'c6\'ac\'b5\'c4\'ca\'b1\'ba\'f2  \'b7\'d6\'cf\'ed\'b9\'fd\'b3\'cc\'d6\'d0 \'cf\'d4\'ca\'be\'ce\'a2\'d0\'c5\'cd\'bc\'b1\'ea\'ca\'c7\'d2\'f2\'ce\'aa\'ce\'d2\'c3\'c7\'c3\'bb\'d3\'d0\'c9\'e8\'d6\'c3\'cb\'f5\'c2\'d4\'cd\'bc\'a3\'ac
+\f1 message.\cf5 thumbData\cf0  = [\cf6 self\cf0  \cf7 imageWithImage\cf0 :[\cf3 UIImage\cf0  \cf4 imageWithContentsOfFile\cf0 :imagePath] \cf7 scaledToSize\cf0 :\cf4 CGSizeMake\cf0 (\cf8 300\cf0 , \cf8 300\cf0 )];//
+\f0 \'cb\'f5\'c2\'d4\'cd\'bc
+\f1 \
+        ext.\cf5 imageData\cf0  = [\cf3 NSData\cf0  \cf4 dataWithContentsOfFile\cf0 :imagePath];//
+\f0 \'d4\'b4\'ca\'fd\'be\'dd
+\f1 \
+
+\f0 \'cb\'f5\'c2\'d4\'cd\'bc\'bf\'c9\'d2\'d4\'d0\'a1\'d3\'da
+\f1 32k 
+\f0 \'d5\'e6\'ca\'b5\'b5\'c4\'cd\'bc\'c6\'ac\'b4\'f3\'d0\'a1\'bf\'c9\'d2\'d4\'b4\'f3\'d3\'da32k\'a3\'ac\'ce\'aa\'c1\'cb\'b7\'c0\'d6\'b9\'cd\'bc\'c6\'ac\'b9\'fd\'b4\'f3\'b4\'f3\'d3\'da32k\'a3\'ac\'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'d1\'b9\'cb\'f5\'b4\'a6\'c0\'ed\'cf\'c2 \
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f1 \cf9 /**\
+ * 
+\f0 \'b4\'a6\'c0\'ed\'cb\'f5\'c2\'d4\'cd\'bc\'b4\'f3\'d0\'a1
+\f1  
+\f0 \'cf\'d4\'ca\'be
+\f1   
+\f0 \'cf\'d4\'ca\'be\'b5\'c4\'ca\'fd\'be\'dd\'b2\'bb\'b4\'a6\'c0\'ed
+\f1 \
+ */\cf0 \
+- (\cf3 NSData\cf0  *)imageWithImage:(\cf3 UIImage\cf0 *)image scaledToSize:(\cf10 CGSize\cf0 )newSize;\
+\{\
+    \cf4 UIGraphicsBeginImageContext\cf0 (newSize);\
+    [image \cf4 drawInRect\cf0 :\cf4 CGRectMake\cf0 (\cf8 0\cf0 ,\cf8 0\cf0 ,newSize.\cf10 width\cf0 ,newSize.\cf10 height\cf0 )];\
+    \cf3 UIImage\cf0 * newImage = \cf4 UIGraphicsGetImageFromCurrentImageContext\cf0 ();\
+    \cf4 UIGraphicsEndImageContext\cf0 ();\
+    \cf6 return\cf0  \cf4 UIImageJPEGRepresentation\cf0 (newImage, \cf8 0.9\cf0 );\
+\}\
+\
+\
+3.
+\f0 \'d6\'c6\'d7\'f7framework\
+1.\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'b9\'a4\'b3\'cc \'d1\'a1\'d4\'f1cocoa Touch framework \'d4\'da\'ce\'d2\'c3\'c7\'b5\'c4framework.h\'cd\'b7\'ce\'c4\'bc\'fe\'d6\'d0\'b0\'d1\'d0\'e8\'d2\'aa\'b1\'a9\'c2\'b6\'b5\'c4\'b3\'f6\'c0\'b4\'b7\'bd\'b7\'a8\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe\'b5\'bc\'c8\'eb \
+\'c0\'fd\'a3\'ba
+\f1 \cf11 #import \cf12 <titleBarFramework/LBNewsTitleBar.h>\cf11 \
+#import \cf12 <titleBarFramework/LBNHSegmentView.h>\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+\cf0 2.
+\f0 \'d4\'da
+\f1 build phases
+\f0 \'cf\'c2\'b5\'c4Headers\'cf\'c2\'b0\'d1\'b5\'bc\'c8\'eb\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe\'b1\'a9\'c2\'b6\'b3\'f6\'c0\'b4  \'cd\'cf\'b5\'bdpublic\'cf\'c2\
+3. Build active architecture only \'d1\'a1no  \'ca\'ca\'d3\'a6\'b6\'e0\'c9\'e8\'b1\'b8\
+4. \'d4\'da
+\f2\fs32 \cf13 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Mach-O type \cf0 \'d1\'a1\'d4\'f1\'be\'b2\'cc\'ac\'bf\'e2   static library
+\f1\fs36 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+
+\f0 5.edit scheme \'b0\'d1run\'b8\'c4\'b3\'c9release  \'b2\'bb\'d0\'e8\'d2\'aalog  \'c8\'bb\'ba\'f3\'d4\'da\'c4\'a3\'c4\'e2\'c6\'f7\'ba\'cd\'d5\'e6\'bb\'fa\'c9\'cf\'b8\'f7\'c5\'dc\'d2\'bb\'cf\'c2  \'be\'cd\'bf\'b4\'b5\'bdproducts\'cf\'c2\'d3\'d0framework\'b3\'f6\'c0\'b4\
+6.\'b0\'d1\'c4\'a3\'c4\'e2\'c6\'f7\'ba\'cd\'d5\'e6\'bb\'fa\'b5\'c4framework\'ba\'cf\'b3\'c9\'d2\'bb\'b8\'f6\'d5\'e6\'bb\'fa\'c4\'a3\'c4\'e2\'c6\'f7\'b6\'bc\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'b5\'c4  \'d3\'c3lipo \'d6\'b8\'c1\'ee\
+\'c0\'fd\'a3\'ba
+\f3\fs24 \cf14 \cb15 lipo -create Release-iphoneos/IJKMediaFramework.framework/IJKMediaFramework Release-iphonesimulator/IJKMediaFramework.framework/IJKMediaFramework -output IJKMediaFramework\
+
+\f0\fs36 \cf0 \cb1 \'b0\'d1\'b5\'bc\'b3\'f6\'b5\'c4\'be\'b2\'cc\'ac\'bf\'e2\'cc\'e6\'bb\'bb\'b5\'f4\'d5\'e6\'bb\'faframework\'c0\'ef\'b5\'c4\'be\'b2\'cc\'ac\'bf\'e2  \'d5\'e2\'b8\'f6framework\'be\'cd\'bf\'c9\'d2\'d4\'d4\'da\'d5\'e6\'bb\'fa\'ba\'cd\'c4\'a3\'c4\'e2\'c6\'f7\'c5\'dc\'c1\'cb\'a1\'a3\
+7.\'bf\'c9\'c4\'dc\'d3\'f6\'b5\'bd\'b5\'c4\'ce\'ca\'cc\'e2\'be\'cd\'ca\'c7\'ce\'d2\'c3\'c7framework\'c0\'ef\'b7\'d6\'c0\'e0\'bc\'d3\'d4\'d8\'b2\'bb\'b3\'f6\'c0\'b4 \'d4\'daother link flag\'cf\'c2 \'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3-ObjC  \'c8\'e7\'b9\'fb\'b2\'bb\'d0\'d0\'be\'a1\'c1\'bf\'b2\'bb\'d2\'aa\'ca\'b9\'d3\'c3-all_load \'bb\'e1\'bc\'d3\'d4\'d8\'cb\'f9\'d3\'d0\'b5\'c4\'c4\'bf\'b1\'ea\'ce\'c4\'bc\'fe  \'ca\'b9\'d3\'c3-force_load framework\'cf\'c2\'b5\'c4\'be\'b2\'cc\'ac\'bf\'e2 \
+\'c0\'fd\'a3\'ba
+\fs28 \cf16 \expnd0\expndtw0\kerning0
+\CocoaLigature1 -force_load \'a1\'b0$(SRCROOT)/LBPIP/titleBarFramework.framework/titleBarFramework"\'a3\'a9  \'cd\'cf\'bd\'f8\'c8\'a5framework \'ca\'d6\'b6\'af\'bc\'d3\'c9\'cf/\'be\'b2\'cc\'ac\'bf\'e2\'c2\'b7\'be\'b6  \'c8\'e7/titleBarFramework\
+\
+\'cf\'c2\'c3\'e6\'ca\'c7\'d3\'f6\'b5\'bd\'b5\'c4\'ce\'ca\'cc\'e2\'a3\'ba
+\fs36 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\'d7\'d4\'b6\'a8\'d2\'e5
+\f1 framework  1){\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/ydc__/article/details/44921529"}}{\fldrslt 
+\f4\fs40 \cf17 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ios Framework 
+\f2 \'d6\'c6\'d7\'f7
+\f4  
+\f2 \'b5\'c4\'d2\'bb\'b8\'f6\'bf\'d3
+\f4  Reason: image not found dyld: Library not loaded:}}
+\f4\fs40 \cf17 \expnd0\expndtw0\kerning0
+\CocoaLigature1   
+\fs32 \cf13 Could not build module \'91x\'92
+\f2 \'b5\'c4\'b4\'ed\'ce\'f3\'cc\'e1\'ca\'be  \'d4\'da.h\'d6\'d0\'b1\'a9\'c2\'b6\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe   \'ca\'c7\'c3\'bb\'d3\'d0\'b6\'d4\'cd\'e2\'b9\'ab\'bf\'aa\'b5\'c4\'c0\'e0   2\'a3\'a9\'a1\'a3\'b1\'e0\'d2\'eb\'c3\'bb\'d3\'d0\'b6\'a8\'d2\'e5\'b6\'d4\'cf\'f3  \'bf\'c9\'c4\'dc\'ca\'c7\'ce\'d2\'c3\'c7\'d5\'e6\'bb\'fa\'d6\'d0\'d3\'c3\'b5\'c4\'c4\'a3\'c4\'e2\'c6\'f7\'b5\'c4framework\
+    3\'a3\'a9\'b6\'af\'cc\'ac\'b5\'c4framework\'d0\'e8\'d2\'aa\'cc\'d8\'ca\'e2\'cc\'ed\'bc\'d3\'bd\'f8\'c8\'a5 \'be\'b2\'cc\'ac\'b5\'c4\'d0\'e8\'d2\'aa\'ce\'d2\'c3\'c7\'d4\'dabuild settings /Mach-O type\'d6\'d0\'c9\'e8\'d6\'c3\'b3\'c9static Library  4\'a3\'a9
+\f0\fs26 \cf0 \cb18 \'bc\'e6\'c8\'dd\'c8\'ab\'b2\'bf\'c9\'e8\'b1\'b8\'bd\'e2\'be\'f6\'b7\'bd\'b7\'a8\'a3\'ba\'b8\'c4\'cf\'c2\'be\'b2\'cc\'ac\'bf\'e2\'b5\'c4\'bc\'e6\'c8\'dd\'ca\'f4\'d0\'d4\'a1\'a3
+\f5 Target
+\f0 \'a3\'ba
+\f5  ->\'a0Build Settings ->\'a0 Architectures -> Build Active Architecture Only 
+\f0 \'c8\'ab\'b8\'c4\'b3\'c9
+\f5 NO
+\f0 \'a3\'bb
+\f5 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb18 Build Active Architecture Only\cb1 \
+
+\f0 \cb18 \'d5\'e2\'b8\'f6\'ca\'f4\'d0\'d4\'c9\'e8\'d6\'c3\'ce\'aa
+\f5 yes
+\f0 \'a3\'ac\'ca\'c7\'ce\'aa\'c1\'cb
+\f5 debug
+\f0 \'b5\'c4\'ca\'b1\'ba\'f2\'b1\'e0\'d2\'eb\'cb\'d9\'b6\'c8\'b8\'fc\'bf\'ec\'a3\'ac\'cb\'fc\'d6\'bb\'b1\'e0\'d2\'eb\'b5\'b1\'c7\'b0\'b5\'c4
+\f5 architecture
+\f0 \'b0\'e6\'b1\'be\'a3\'ac\'cb\'f9\'d2\'d4\'bb\'e1\'b1\'a8\'b4\'ed\'b1\'e0\'d2\'eb\'b2\'bb\'b5\'bd\'ce\'c4\'bc\'fe\'a3\'ac\'b3\'f6\'b4\'ed\'a3\'a8
+\f5 "_OBJC_CLASS_$_xxxxxx", referenced from:
+\f0 \'a3\'a9
+\f5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\cb1 \
+
+\f0 \cb18 \'b6\'f8\'c9\'e8\'d6\'c3\'ce\'aa
+\f5 no
+\f0 \'ca\'b1\'a3\'ac\'bb\'e1\'b1\'e0\'d2\'eb\'cb\'f9\'d3\'d0\'b5\'c4\'b0\'e6\'b1\'be\'a3\'ac\'d5\'e2\'d1\'f9\'be\'cd\'bd\'e2\'be\'f6\'b1\'e0\'d2\'eb\'b3\'f6\'b4\'ed\'b5\'c4\'ce\'ca\'cc\'e2\'c1\'cb\'a1\'a3 4.\'b1\'a8\'b7\'bd\'b7\'a8\'c3\'bb\'d5\'d2\'b5\'bd\'a3\'ac\'ce\'d2\'c3\'c7\'d2\'bb\'b0\'e3\'ca\'b9\'d3\'c3-ObjC \'c0\'b4\'bc\'d3\'d4\'d8\'cb\'f9\'d3\'d0\'b7\'d6\'c0\'e0 
+\fs28 \cf16 \cb1 \'c1\'b4\'bd\'d3\'c6\'f7\'be\'cd\'bb\'e1\'b0\'d1\'be\'b2\'cc\'ac\'bf\'e2\'d6\'d0\'cb\'f9\'d3\'d0\'b5\'c4
+\f6 Objective-C
+\f0 \'c0\'e0\'ba\'cd\'b7\'d6\'c0\'e0\'b6\'bc\'bc\'d3\'d4\'d8\'b5\'bd\'d7\'ee\'ba\'f3\'b5\'c4\'bf\'c9\'d6\'b4\'d0\'d0\'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac\'cb\'e4\'c8\'bb\'d5\'e2\'d1\'f9\'bf\'c9\'c4\'dc\'bb\'e1\'d2\'f2\'ce\'aa\'bc\'d3\'d4\'d8\'c1\'cb\'ba\'dc\'b6\'e0\'b2\'bb\'b1\'d8\'d2\'aa\'b5\'c4\'ce\'c4\'bc\'fe\'b6\'f8\'b5\'bc\'d6\'c2\'bf\'c9\'d6\'b4\'d0\'d0\'ce\'c4\'bc\'fe\'b1\'e4\'b4\'f3\'a3\'ac\'b5\'ab\'ca\'c7\'d5\'e2\'b8\'f6\'b2\'ce\'ca\'fd\'ba\'dc\'ba\'c3\'b5\'d8\'bd\'e2\'be\'f6\'c1\'cb\'ce\'d2\'c3\'c7\'cb\'f9\'d3\'f6\'b5\'bd\'b5\'c4\'ce\'ca\'cc\'e2\'a1\'a3\'b5\'ab\'ca\'c7\'ca\'c2\'ca\'b5\'d5\'e6\'b5\'c4\'ca\'c7\'d5\'e2\'d1\'f9\'b5\'c4\'c2\'f0\'a3\'bf
+\f6 \
+
+\f0 \'c8\'e7\'b9\'fb
+\f6\b -ObjC
+\f0\b0 \'b2\'ce\'ca\'fd\'d5\'e6\'b5\'c4\'d5\'e2\'c3\'b4\'d3\'d0\'d0\'a7\'a3\'ac\'c4\'c7\'c3\'b4\'ca\'c2\'c7\'e9\'be\'cd\'bb\'e1\'bc\'f2\'b5\'a5\'b6\'e0\'c1\'cb\'a1\'a3
+\f6 \
+Important: For 64-bit and iPhone OS applications, there is a linker bug that prevents -ObjC from loading objects files from static libraries that contain only categories and no classes. The workaround is to use the -allload or -forceload flags.\
+
+\f0 \'b5\'b1\'be\'b2\'cc\'ac\'bf\'e2\'d6\'d0\'d6\'bb\'d3\'d0\'b7\'d6\'c0\'e0\'b6\'f8\'c3\'bb\'d3\'d0\'c0\'e0\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac
+\f6\b -ObjC
+\f0\b0 \'b2\'ce\'ca\'fd\'be\'cd\'bb\'e1\'ca\'a7\'d0\'a7\'c1\'cb\'a1\'a3\'d5\'e2\'ca\'b1\'ba\'f2\'a3\'ac\'be\'cd\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3
+\f6\b -all_load
+\f0\b0 \'bb\'f2\'d5\'df
+\f6\b -force_load
+\f0\b0 \'c1\'cb\'a1\'a3
+\f6\b -all_load
+\f0\b0 \'bb\'e1\'c8\'c3\'c1\'b4\'bd\'d3\'c6\'f7\'b0\'d1\'cb\'f9\'d3\'d0\'d5\'d2\'b5\'bd\'b5\'c4\'c4\'bf\'b1\'ea\'ce\'c4\'bc\'fe\'b6\'bc\'bc\'d3\'d4\'d8\'b5\'bd\'bf\'c9\'d6\'b4\'d0\'d0\'ce\'c4\'bc\'fe\'d6\'d0\'a3\'ac\'b5\'ab\'ca\'c7\'c7\'a7\'cd\'f2\'b2\'bb\'d2\'aa\'cb\'e6\'b1\'e3\'ca\'b9\'d3\'c3\'d5\'e2\'b8\'f6\'b2\'ce\'ca\'fd\'a3\'a1\'bc\'d9\'c8\'e7\'c4\'e3\'ca\'b9\'d3\'c3\'c1\'cb\'b2\'bb\'d6\'b9\'d2\'bb\'b8\'f6\'be\'b2\'cc\'ac\'bf\'e2\'ce\'c4\'bc\'fe\'a3\'ac\'c8\'bb\'ba\'f3\'d3\'d6\'ca\'b9\'d3\'c3\'c1\'cb\'d5\'e2\'b8\'f6\'b2\'ce\'ca\'fd\'a3\'ac\'c4\'c7\'c3\'b4\'c4\'e3\'ba\'dc\'d3\'d0\'bf\'c9\'c4\'dc\'bb\'e1\'d3\'f6\'b5\'bd
+\f6\b ld: duplicate symbol
+\f0\b0 \'b4\'ed\'ce\'f3\'a3\'ac\'d2\'f2\'ce\'aa\'b2\'bb\'cd\'ac\'b5\'c4\'bf\'e2\'ce\'c4\'bc\'fe\'c0\'ef\'c3\'e6\'bf\'c9\'c4\'dc\'bb\'e1\'d3\'d0\'cf\'e0\'cd\'ac\'b5\'c4\'c4\'bf\'b1\'ea\'ce\'c4\'bc\'fe\'a3\'ac\'cb\'f9\'d2\'d4\'bd\'a8\'d2\'e9\'d4\'da\'d3\'f6\'b5\'bd
+\f6\b -ObjC
+\f0\b0 \'ca\'a7\'d0\'a7\'b5\'c4\'c7\'e9\'bf\'f6\'cf\'c2\'ca\'b9\'d3\'c3
+\f6\b -force_load
+\f0\b0 \'b2\'ce\'ca\'fd\'a1\'a3
+\f6 \
+
+\b -force_load
+\f0\b0 \'cb\'f9\'d7\'f6\'b5\'c4\'ca\'c2\'c7\'e9\'b8\'fa
+\f6\b -all_load
+\f0\b0 \'c6\'e4\'ca\'b5\'ca\'c7\'d2\'bb\'d1\'f9\'b5\'c4\'a3\'ac\'b5\'ab\'ca\'c7
+\f6\b -force_load
+\f0\b0 \'d0\'e8\'d2\'aa\'d6\'b8\'b6\'a8\'d2\'aa\'bd\'f8\'d0\'d0\'c8\'ab\'b2\'bf\'bc\'d3\'d4\'d8\'b5\'c4\'bf\'e2\'ce\'c4\'bc\'fe\'b5\'c4\'c2\'b7\'be\'b6\'a3\'ac\'d5\'e2\'d1\'f9\'b5\'c4\'bb\'b0\'a3\'ac\'c4\'e3\'be\'cd\'d6\'bb\'ca\'c7\'cd\'ea\'c8\'ab\'bc\'d3\'d4\'d8\'c1\'cb\'d2\'bb\'b8\'f6\'bf\'e2\'ce\'c4\'bc\'fe\'a3\'ac\'b2\'bb\'d3\'b0\'cf\'ec\'c6\'e4\'d3\'e0\'bf\'e2\'ce\'c4\'bc\'fe\'b5\'c4\'b0\'b4\'d0\'e8\'bc\'d3\'d4\'d8\'a1\'a3\'a3\'a8.a\'b5\'c4\'be\'b2\'cc\'ac\'bf\'e2\'ce\'d2\'c3\'c7\'d6\'aa\'b5\'c0\'d6\'b1\'bd\'d3-force_load \'a3\'ac\'b5\'abframework\'b5\'c4\'ce\'d2\'c3\'c7\'b2\'bb\'c4\'dc\'d6\'b1\'bd\'d3-force_load framework\'b2\'bb\'c8\'bb\'bb\'e1\'b1\'a8\'b4\'ed  \'b2\'bb\'c6\'a5\'c5\'e4\'b5\'c4\'ce\'c4\'bc\'fe \'ce\'d2\'c3\'c7\'d0\'e8\'d2\'aa-force_load framework\'c0\'ef\'b5\'c4\'be\'b2\'cc\'ac\'bf\'e2  \'be\'cd\'ba\'cdframework\'c0\'ef\'b3\'e5\'cd\'bb\'d6\'d8\'b8\'b4\'b6\'a8\'d2\'e5\'b6\'d4\'cf\'f3\'d2\'bb\'d1\'f9  \'a3\'acframework\'c0\'ef\'c3\'e6\'d2\'b2\'ca\'c7\'d3\'d0\'b8\'f6\'be\'b2\'cc\'ac\'bf\'e2\'b5\'c4 \'b4\'a6\'c0\'ed\'b7\'bd\'b7\'a8 -force_load \'a1\'b0$(SRCROOT)/LBPIP/titleBarFramework.framework/titleBarFramework"\'a3\'a9\
+\'b2\'ce\'bf\'bc\'b5\'c4\'c1\'ac\'bd\'d3 \'a3\'ba http://blog.csdn.net/u012243474/article/details/52619344\
+\
+\'b1\'a8\'b4\'ed1 \'a3\'ba 
+\f7\b\fs36 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 Library not loaded: @rpath/titleBarFramework.framework/titleBarFramework\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+\cf0   Referenced from: /var/containers/Bundle/Application/DED6263A-7909-4991-868C-4D911D0E9ACE/LBPIP.app/LBPIP\
+  Reason: image not found  
+\f0 \'ce\'d2\'c3\'c7\'bc\'d3\'d4\'d8\'b5\'c4\'ca\'c7\'b6\'af\'cc\'ac\'b5\'c4
+\f7 framework  
+\f0 \'d0\'e8\'d2\'aa\'b5\'bc\'b3\'f6\'be\'b2\'cc\'ac\'b5\'c4
+\f7 framework
+\f0 \'a3\'a8\'d4\'da\'d7\'d4\'d7\'f7framework\'b5\'c4\'ca\'b1\'ba\'f2\'d4\'dabuild Settings\'c0\'ef
+\f2\b0\fs32 \cf13 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Mach-O type\'d6\'d0\'c9\'e8\'d6\'c3\'b3\'c9static Library
+\f0\b\fs36 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \'a3\'a9\'bb\'f2\'d4\'f2\'d4\'da\'ca\'b9\'d3\'c3\'b5\'c4\'ca\'b1\'ba\'f2\'b0\'d1\'b6\'af\'cc\'ac\'b5\'c4
+\f7 framework 
+\f0 \'cc\'ed\'bc\'d3\'b5\'bd
+\f8\b0\fs24 \cf19 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Embedded\'a0Binaries
+\f0 \'a3\'a8\'d4\'dd\'ce\'b4\'d5\'d2\'b5\'bd\'b4\'cb\'cf\'ee\'d1\'e9\'d6\'a4\'a3\'a9\
+\
+\'b1\'a8\'b4\'ed2 \'a3\'ba\'cd\'b7\'ce\'c4\'bc\'fenot found \'ce\'d2\'c3\'c7\'c3\'bb\'d3\'d0\'d4\'da\'d7\'d4\'d7\'f7\'b5\'c4\'ca\'b1\'ba\'f2\'b0\'d1\'b5\'bc\'c8\'ebframework.h\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe \'b1\'a9\'c2\'b6\'b3\'f6\'c0\'b4  \'d5\'e2\'c0\'ef\'bf\'b4framework\'c4\'bf\'c2\'bc\'cf\'c2headers\'ce\'c4\'bc\'fe\'bc\'d0\'cf\'c2\'be\'cd\'bf\'c9\'d2\'d4\'bf\'b4\'b3\'f6\'c0\'b4   \'d0\'e8\'d2\'aa\'d4\'dabuild phases\'d6\'d0header\'cf\'c2\'b0\'d1\'b5\'bc\'c8\'eb\'b5\'c4\'cc\'ed\'bc\'d3\'b5\'bdpublic\'cf\'c2\
+\
+\'b1\'a8\'b4\'ed3 \'a3\'ba
+\f1\fs22 \cf0 \kerning1\expnd0\expndtw0 Undefined symbols for architecture arm64:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li240\fi-240\pardirnatural\partightenfactor0
+\cf0   "_OBJC_CLASS_$_LBNHSegmentView", referenced from:   
+\f0 \'c3\'f7\'c3\'f7framework\'cf\'c2\'b5\'c4header\'cf\'c2\'d3\'d0\'d5\'e2\'b8\'f6\'cd\'b7\'ce\'c4\'bc\'fe\'bb\'b9\'cb\'b5\'c3\'bb\'d3\'d0\'b6\'a8\'d2\'e5   \'c3\'bb\'d3\'d0\'b5\'bc\'b3\'f6\'be\'b2\'cc\'ac\'b5\'c4
+\f1 framework  
+\f0 \'ca\'c7\'b6\'af\'cc\'ac\'b5\'c4\
+\
+\
+
+\fs36 4. mac \'d6\'b8\'c1\'ee  cd .. \'b7\'b5\'bb\'d8\'c9\'cf\'bc\'b6\'c4\'bf\'c2\'bc   cd ~ \'b7\'b5\'bb\'d8\'b8\'f9\'c4\'bf\'c2\'bc
+\f1\fs22 \
+\
+
+\fs36 \
+5.  button font
+\f0 \'c4\'ac\'c8\'cf
+\f1 size 18  label
+\f0 \'ca\'c717
+\fs22 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f9\fs36 \cf17 \expnd0\expndtw0\kerning0
+-layoutSubviews
+\f0 \'b7\'bd\'b7\'a8\'a3\'ba\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'ac\'c4\'ac\'c8\'cf\'c3\'bb\'d3\'d0\'d7\'f6\'c8\'ce\'ba\'ce\'ca\'c2\'c7\'e9\'a3\'ac\'d0\'e8\'d2\'aa\'d7\'d3\'c0\'e0\'bd\'f8\'d0\'d0\'d6\'d8\'d0\'b4
+\f9 \
+-setNeedsLayout
+\f0 \'b7\'bd\'b7\'a8\'a3\'ba
+\f9  
+\f0 \'b1\'ea\'bc\'c7\'ce\'aa\'d0\'e8\'d2\'aa\'d6\'d8\'d0\'c2\'b2\'bc\'be\'d6\'a3\'ac\'d2\'ec\'b2\'bd\'b5\'f7\'d3\'c3
+\f9 layoutIfNeeded
+\f0 \'cb\'a2\'d0\'c2\'b2\'bc\'be\'d6\'a3\'ac\'b2\'bb\'c1\'a2\'bc\'b4\'cb\'a2\'d0\'c2\'a3\'ac\'b5\'ab
+\f9 layoutSubviews
+\f0 \'d2\'bb\'b6\'a8\'bb\'e1\'b1\'bb\'b5\'f7\'d3\'c3
+\f9 \
+-layoutIfNeeded
+\f0 \'b7\'bd\'b7\'a8\'a3\'ba\'c8\'e7\'b9\'fb\'a3\'ac\'d3\'d0\'d0\'e8\'d2\'aa\'cb\'a2\'d0\'c2\'b5\'c4\'b1\'ea\'bc\'c7\'a3\'ac\'c1\'a2\'bc\'b4\'b5\'f7\'d3\'c3
+\f9 layoutSubviews
+\f0 \'bd\'f8\'d0\'d0\'b2\'bc\'be\'d6\'a3\'a8\'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'b1\'ea\'bc\'c7\'a3\'ac\'b2\'bb\'bb\'e1\'b5\'f7\'d3\'c3
+\f9 layoutSubviews
+\f0 \'a3\'a9\
+\
+6.dispatch_group \'d6\'b4\'d0\'d0\'c8\'ce\'ce\'f1\'ca\'b1\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3dispatch_group_enter \'ba\'cddispatch_group_leave \'b3\'c9\'b6\'d4\'b3\'f6\'cf\'d6\'b1\'a3\'d6\'a4\'d4\'dagroup\'b6\'d3\'c1\'d0\'c0\'ef\'d6\'b4\'d0\'d0\'b5\'c4\'c8\'ce\'ce\'f1\'c8\'e7\'b9\'fb\'d3\'d0\'d2\'ec\'b2\'bd\'c8\'ce\'ce\'f1\'d3\'d0block\'bb\'d8\'b5\'f7\'bf\'c9\'d2\'d4\'d4\'danotify\'c0\'ef\'b5\'c8\'d2\'ec\'b2\'bd\'c8\'ce\'ce\'f1\'bd\'e1\'ca\'f8block\'bb\'d8\'b5\'f7\'b9\'fd\'c0\'b4\'ca\'b1\'b2\'c5\'cd\'a8\'d6\'aa  \'b2\'bb\'c8\'bb\'bb\'e1\'d6\'b4\'d0\'d0group\'b6\'d3\'c1\'d0\'c0\'ef\'b5\'c4\'d2\'ec\'b2\'bd\'c8\'ce\'ce\'f1\'ca\'b1\'be\'cd\'bf\'aa\'ca\'bcnotify\'cd\'a8\'d6\'aa\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 -(\cf6 void\cf0 )testGCDGroup\{\
+    \cf10 dispatch_group_t\cf0  group = \cf4 dispatch_group_create\cf0 ();\
+    \cf10 dispatch_queue_t\cf0  queue = \cf4 dispatch_queue_create\cf0 (\cf12 "currentThread"\cf0 , \cf20 DISPATCH_QUEUE_CONCURRENT\cf0 );\
+    \
+    \cf4 dispatch_group_enter\cf0 (group);\
+    \cf4 dispatch_group_async\cf0 (group, queue, ^\{\
+        \cf2 //        NSLog(@"1===== start ");\cf0 \
+        \cf2 //        [NSThread sleepForTimeInterval:2.f];\cf0 \
+        \cf2 //        NSLog(@"1===== end ");\cf0 \
+        [\cf6 self\cf0  \cf7 testMoniRequest\cf0 :^\{\
+            \cf4 NSLog\cf0 (\cf12 @"1======END"\cf0 );\
+            \cf4 dispatch_group_leave\cf0 (group);\
+        \}];\
+    \});\
+    \
+    \cf4 dispatch_group_enter\cf0 (group);\
+    \cf4 dispatch_group_async\cf0 (group, queue, ^\{\
+        \cf2 //        NSLog(@"1===== start ");\cf0 \
+        \cf2 //        [NSThread sleepForTimeInterval:2.f];\cf0 \
+        \cf2 //        NSLog(@"1===== end ");\cf0 \
+        [\cf6 self\cf0  \cf7 testMoniRequest\cf0 :^\{\
+            \cf4 NSLog\cf0 (\cf12 @"2======END"\cf0 );\
+            \cf4 dispatch_group_leave\cf0 (group);\
+        \}];\
+    \});\
+    \
+\cf2 //    dispatch_group_async(group, queue, ^\{\cf0 \
+\cf2 //        [self testMoniRequest:^\{\cf0 \
+\cf2 //            NSLog(@"2======END");\cf0 \
+\cf2 //        \}];\cf0 \
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+\cf9 ////        NSLog(@"2===== start ");\cf0 \
+\cf9 ////        [NSThread sleepForTimeInterval:2.f];\cf0 \
+\cf9 ////        NSLog(@"2===== end ");\cf0 \
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+\cf2 //    \});\cf0 \
+    \
+    \cf4 dispatch_group_notify\cf0 (group, queue, ^\{\
+        \cf4 NSLog\cf0 (\cf12 @"group is end ======"\cf0 );\
+    \});\
+    \
+\}
+\fs22 \CocoaLigature1 \
+\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\fs36 \cf0 \
+7.
+\f0 \'ca\'b9\'d3\'c3
+\f1 masonry
+\f0 \'d4\'bc\'ca\'f8
+\f1 scrollview
+\f0 \'b5\'c4\'ca\'b1\'ba\'f2
+\f1   
+\f0 \'c9\'cf\'c3\'e6\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6
+\f1 view
+\f0 \'b5\'c4
+\f1 top
+\f0 \'d4\'bc\'ca\'f8
+\f1  
+\f0 \'d2\'bb\'b6\'a8\'ca\'c7\'cf\'e0\'b6\'d4\'d3\'da
+\f1 scrollview
+\f0 \'b5\'c4
+\f1   scrollview
+\f0 \'b5\'c4\'bb\'ac\'b6\'af\'cc\'f5\'cf\'d4\'ca\'be\'bf\'c9\'d2\'d4\'bb\'ac\'b6\'af  \'b5\'ab\'d7\'d3\'bf\'d5\'bc\'e4\'d4\'da\'c0\'ef\'c3\'e6\'bb\'ac\'b6\'af\'b2\'bb\'c1\'cb\
+\
+\
+8.\'b9\'e9\'b5\'b5\'bd\'e2\'b5\'b5\'bf\'c9\'d2\'d4\'b6\'d4\'b6\'d4\'cf\'f3\'a1\'a2\'ca\'fd\'d7\'e9\'a1\'a2\'d7\'d6\'b5\'e4  \'a3\'ac\'b5\'ab\'b6\'d4\'cf\'f3\'ba\'cd\'ca\'fd\'d7\'e9\'ba\'cd\'d7\'d6\'b5\'e4\'c0\'ef\'b5\'c4\'b6\'d4\'cf\'f3\'b1\'d8\'d0\'eb\'d7\'f1\'ca\'d8NSCoding\'d0\'ad\'d2\'e9  \'ca\'b5\'cf\'d6\'c1\'cb
+\f1 \CocoaLigature0 encodeWithCoder
+\f0 \'b7\'b4\'d0\'f2\'c1\'d0\'bb\'af\'ba\'cd
+\f1 initWithCoder
+\f0 \'d0\'f2\'c1\'d0\'bb\'af\'b7\'bd\'b7\'a8.\
+	
+\f1 \cf4 archiveRootObject
+\f0 \'bf\'c9\'d2\'d4\'bd\'ab\'b6\'d4\'cf\'f3\'a1\'a2array\'a1\'a2\'d7\'d6\'b5\'e4\'b9\'e9\'b5\'b5\'b5\'ab\'d0\'e8\'d2\'aa\'c0\'ef\'c3\'e6\'b5\'c4\'b6\'d4\'cf\'f3\'d7\'f1\'ca\'d8
+\f1 NSCoding
+\f0 \'d0\'ad\'d2\'e9
+\f1  
+\f0 \'ca\'b5\'cf\'d6\'d0\'f2\'c1\'d0\'bb\'af\'ba\'cd\'b7\'b4\'d0\'f2\'c1\'d0\'bb\'af\'b7\'bd\'b7\'a8
+\f1  writeToFile
+\f0 \'d6\'bb\'c4\'dc\'d0\'b4\'c8\'ebIOS\'b5\'c4\'bb\'f9\'b1\'be\'c0\'e0\'d0\'cd \'b7\'f1\'d4\'f2\'bb\'e1\'d0\'b4\'c8\'eb\'ca\'a7\'b0\'dc\
+\
+9 
+\f9 \cf21 \expnd0\expndtw0\kerning0
+\CocoaLigature1 edgesForExtendedLayout 
+\f0 \'ca\'f4\'d0\'d4\'c4\'ac\'c8\'cf\'ca\'c7
+\f9 UIRectEdgeAll 
+\f0 \'d1\'d3\'c9\'ec\'b5\'bdnavibar\'ba\'cdtabor\'cf\'c2\'c3\'e6  \'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3
+\f9 UIRectEdgeNone 
+\f0 \'d7\'d4\'b6\'af\'bc\'c6\'cb\'e3
+\f9 Controller
+\f0 \'b5\'c4
+\f9 view
+\f0 \'b5\'c4\'ce\'bb\'d6\'c3\'ba\'cd\'b4\'f3\'d0\'a1
+\f9   
+\f0 \'bb\'e1\'d7\'d4\'b6\'af\'c8\'a5\'b5\'f4navibar\'ba\'cd
+\f9 tabbar \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf21 \'b5\'b1
+\f9  automaticallyAdjustsScrollViewInsets 
+\f0 \'ce\'aa
+\f9  NO 
+\f0 \'ca\'b1\'a3\'ac
+\f9 tableview 
+\f0 \'ca\'c7\'b4\'d3\'c6\'c1\'c4\'bb\'b5\'c4\'d7\'ee\'c9\'cf\'b1\'df\'bf\'aa\'ca\'bc\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'b1\'bb
+\f9 \
+
+\f0 \'b5\'bc\'ba\'bd\'c0\'b8
+\f9  & 
+\f0 \'d7\'b4\'cc\'ac\'c0\'b8\'b8\'b2\'b8\'c7
+\f9 \
+
+\f0 \'b5\'b1
+\f9  automaticallyAdjustsScrollViewInsets 
+\f0 \'ce\'aa
+\f9  YES 
+\f0 \'ca\'b1\'a3\'ac\'d2\'b2\'ca\'c7\'c4\'ac\'c8\'cf\'d0\'d0\'ce\'aa\'a3\'ac\'b1\'ed\'cf\'d6\'be\'cd\'b1\'c8\'bd\'cf\'d5\'fd\'b3\'a3\'c1\'cb\'a3\'ac\'ba\'cd
+\f9 \
+edgesForExtendedLayout = UIRectEdgeNone 
+\f0 \'d3\'d0\'c9\'b6\'c7\'f8\'b1\'f0\'a3\'bf
+\f9  
+\f0 \'b2\'bb\'d7\'a2\'d2\'e2\'bf\'c9\'c4\'dc\'ba\'dc\'c4\'d1\'be\'f5\'b2\'ec
+\f9 \
+
+\f0 \'c9\'e8\'bc\'c6\'ca\'a6\'bf\'c9\'c4\'dc\'d2\'bb\'d1\'db\'be\'cd\'bf\'b4\'b4\'a9\'a1\'a3\'a1\'a3\'a1\'a3
+\f9  automaticallyAdjustsScrollViewInsets 
+\f0 \'ce\'aa
+\f9 YES 
+\f0 \'ca\'b1\'a3\'ac
+\f9 \
+tableView 
+\f0 \'c9\'cf\'cf\'c2\'bb\'ac\'b6\'af\'ca\'b1\'a3\'ac\'ca\'c7\'bf\'c9\'d2\'d4\'b4\'a9\'b9\'fd\'b5\'bc\'ba\'bd\'c0\'b8
+\f9 &
+\f0 \'d7\'b4\'cc\'ac\'c0\'b8\'b5\'c4\'a3\'ac\'d4\'da\'cb\'fb\'c3\'c7\'cf\'c2\'c3\'e6\'d3\'d0\'b5\'ad\'b5\'ad\'b5\'c4\'c7\'b3\'c7\'b3\'ba\'ec\'c9\'ab
+\f9 \
+extendedLayoutIncludesOpaqueBars\
+
+\f0 \'ca\'d7\'cf\'c8\'bf\'b4\'cf\'c2\'b9\'d9\'b7\'bd\'bd\'e2\'ca\'cd\'a3\'ac\'c4\'ac\'c8\'cf
+\f9  NO
+\f0 \'a3\'ac
+\f9  
+\f0 \'b5\'ab\'ca\'c7
+\f9 Bar 
+\f0 \'b5\'c4\'c4\'ac\'c8\'cf\'ca\'f4\'d0\'d4\'ca\'c7
+\f9  
+\f0 \'cd\'b8\'c3\'f7\'b5\'c4\'a1\'a3\'a1\'a3\'a1\'a3\'d2\'b2\'be\'cd\'ca\'c7\'cb\'b5\'d6\'bb\'d3\'d0\'d4\'da\'b2\'bb\'cd\'b8\'c3\'f7\'cf\'c2\'b2\'c5\'d3\'d0\'d3\'c3\
+\
+10.
+\f1 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 AVAudioplayer
+\f0 \'ce\'de\'b7\'a8\'d6\'b1\'bd\'d3\'b4\'d3\'cd\'f8\'c2\'e7
+\f1 url
+\f0 \'c9\'cf\'bb\'f1\'c8\'a1\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe   \'bf\'c9\'d2\'d4\'cf\'c8\'b0\'d1\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'cf\'d6\'d4\'da\'cf\'c2\'c0\'b4  \'d4\'da\'d7\'aa\'b3\'c9\'b2\'a5\'b7\'c5\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f1 \cf0  
+\f5\fs28 \cf22 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'a0
+\f0 \'cb\'f9\'d2\'d4
+\f5 AVAudioplayer
+\f0 \'ce\'de\'b7\'a8\'d6\'b1\'bd\'d3\'b4\'d3\'cd\'f8\'c2\'e7
+\f5 url
+\f0 \'c9\'cf\'bb\'f1\'c8\'a1\'d2\'f4\'c6\'b5\'ce\'c4\'bc\'fe\'a3\'ac\'cb\'f9\'d2\'d4\'bf\'c9\'d2\'d4\'d3\'c3\'a3\'ba
+\f5 \
+\pard\pardeftab720\partightenfactor0
+\cf22 data = [NSData\'a0dataWithContentsOfURL:[NSURL\'a0URLWithString:@"http://.../file.mp3"]];\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf22 \'bd\'ab\'cd\'f8\'c2\'e7\'c9\'cf\'d2\'f4\'c6\'b5
+\f5 down
+\f0 \'cf\'c2\'c0\'b4\'a3\'ac\'d4\'d9\'d3\'c3
+\f5 initWithData
+\f0 \'b3\'f5\'ca\'bc\'bb\'af
+\f5 player
+\f0 \'a1\'a3\'b5\'ab\'ca\'c7\'d5\'e2\'d1\'f9
+\f5 down
+\f0 \'cf\'c2\'c0\'b4\'b5\'c4\'ce\'c4\'bc\'fe\'d3\'d0\'ca\'b1\'ca\'c7\'b2\'bb\'cd\'ea\'d5\'fb\'b5\'c4\'a3\'ac\'cb\'f9\'d2\'d4\'b3\'f6\'cf\'d6\'b4\'b4\'bd\'a8\'ca\'a7\'b0\'dc\'ce\'ca\'cc\'e2\'a3\'ac\'b3\'f6\'cf\'d6\'a3\'ba
+\f5 \
+Error Domain=NSOSStatusErrorDomain Code=1954115647\
+
+\f0 \'bd\'e2\'be\'f6\'d5\'e2\'b8\'f6\'ce\'ca\'cc\'e2\'b5\'c4\'b7\'bd\'b7\'a8\'be\'cd\'ca\'c7\'bd\'ab
+\f5 data
+\f0 \'b1\'a3\'b4\'e6\'d4\'da\'b1\'be\'b5\'d8\'a3\'ac\'d4\'da\'cd\'a8\'b9\'fd
+\f5 initWithContentsOfURL
+\f0 \'a3\'ac\'d5\'d2\'b5\'bd\'b8\'c3\'ce\'c4\'bc\'fe\'a3\'ac\'d5\'e2\'d1\'f9\'be\'cd\'bf\'c9\'d2\'d4\'b3\'c9\'b9\'a6\'b4\'b4\'bd\'a8\'c1\'cb\'a1\'a3
+\f5 \
+
+\f0 \'d5\'fb\'b8\'f6\'c1\'f7\'b3\'cc\'ce\'aa\'a3\'ba
+\f5 \
+
+\f0 NSData\uc0\u160 *audioData\u160 =\u160 [NSData\u160 dataWithContentsOfURL:someURL];\u160 \
+NSString\uc0\u160 *docDirPath\u160 =\u160 [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,\u160 YES)\u160 objectAtIndex:0];\u160 \
+NSString\uc0\u160 *filePath\u160 =\u160 [NSString\u160 stringWithFormat:@"%@/%@.mp3",\u160 docDirPath\u160 ,\u160 fileName];\
+[audioData writeToFile:filePath atomically:YES];\uc0\u160 \
+NSError\uc0\u160 *error;\u160 \
+NSURL\uc0\u160 *fileURL\u160 =\u160 [NSURL fileURLWithPath:filePath];\u160 \
+player\uc0\u160 =\u160 [[AVAudioPlayer\u160 alloc]\u160 initWithContentsOfURL:fileURL error:&error];\
+if\uc0\u160 (player\u160 ==\u160 nil)\u160 \
+\{\uc0\u160 NSLog(@"AudioPlayer did not load properly: %@",\u160 [error description]);\u160 \}\
+else\
+\{\uc0\u160 [player play];\u160 \}\
+\
+11. 
+\fs32 \cf17 objectforkey \'ca\'c7NSDictionary\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'acvalueforkey \'ca\'c7KVC\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac \'c1\'bd\'d5\'df\'b6\'bc\'ca\'c7\'bc\'fc\'d6\'b5\'b6\'d4\'d3\'a6\'a3\'ac\'c7\'f8\'b1\'f0\'ca\'c7valueforkey \'d6\'bb\'d4\'ca\'d0\'ed\'ca\'b9\'d3\'c3NSString\'c0\'e0\'d0\'cd\'a3\'acobjectforkey\'bf\'c9\'d2\'d4\'ca\'c7\'c8\'ce\'d2\'e2\'c0\'e0\'d0\'cd.\
+\
+12
+\b\fs28 \cf16 \'cf\'c8\'b5\'f7\'d3\'c3\'ca\'d4\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4
+\f6 viewWillLayoutSubviews 
+\f0 \'d2\'d4\'bc\'b0
+\f6 viewDidLayoutSubviews
+\f0 \'a3\'ac\'c8\'bb\'ba\'f3\'b5\'f7\'d3\'c3
+\f6 view
+\f0 \'b5\'c4
+\f6 layoutSubviews
+\f0 \'a1\'a2
+\f6 layoutSubviews 
+\f0 \'a1\'a3\'d7\'ee\'ba\'f3\'b5\'f7\'d3\'c3
+\f6 drawRect\
+\
+13.naviItem
+\f0 \'b5\'c4\'d7\'f3\'d3\'d2
+\f6 item
+\f0 \'d7\'d4\'b6\'a8\'d2\'e5
+\f6 view
+\f0 \'b5\'c4y\'be\'d3\'d6\'d0\'bb\'e1\'c4\'ac\'c8\'cf \'ce\'d2\'c3\'c7\'d6\'bb\'d0\'e8\'d2\'aa\'b9\'d8\'d0\'c4\'b8\'df\'b6\'c8\'bc\'b4\'bf\'c9\
+\
+14.\'c9\'e8\'d6\'c3\'b0\'b4\'c5\'a5\'b5\'c4\'ce\'c4\'d7\'d6\'b8\'bb\'ce\'c4\'b1\'be
+\f1\b0\fs36 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 [button \cf4 setAttributedTitle\cf0 :attributeString \cf4 forState\cf0 :\cf4 UIControlStateNormal\cf0 ];   
+\f0 \'b2\'bb\'d2\'aa\'d3\'c3
+\f1 titleLabel
+\f0 \'b5\'c4\'b8\'bb\'ce\'c4\'b1\'be
+\f1  
+\f0 \'bb\'e1\'b2\'bb\'b3\'f6\'cf\'eb\'d2\'aa\'d0\'a7\'b9\'fb\
+\
+15.
+\f3\fs24 \cf14 \cb15 class-dump -H ahwx.app -o headers  \cf23 \cb24  class-dump
+\f0 \'b5\'c4\'c3\'fc\'c1\'ee  \'ca\'b9\'d3\'c3\'cd\'f8\'d6\'b7
+\f3 http://www.jianshu.com/p/6a6ce18f998e}

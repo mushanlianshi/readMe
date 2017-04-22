@@ -1,0 +1,951 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 HelveticaNeue;\f5\fswiss\fcharset0 ArialMT;
+\f6\fnil\fcharset134 STSongti-SC-Regular;\f7\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red46\green13\blue110;
+\red170\green13\blue145;\red28\green0\blue207;\red63\green110\blue116;\red38\green71\blue75;\red100\green56\blue32;
+\red196\green26\blue22;\red180\green0\blue98;\red77\green0\blue158;\red68\green137\blue147;\red57\green57\blue57;
+\red29\green133\blue25;\red186\green0\blue17;\red35\green35\blue35;\red28\green28\blue28;\red249\green249\blue249;
+\red48\green48\blue48;\red242\green242\blue242;\red83\green104\blue112;\red252\green244\blue220;\red38\green38\blue38;
+\red252\green106\blue8;\red33\green118\blue199;\red251\green0\blue7;\red252\green20\blue84;\red11\green91\blue159;
+\red0\green11\blue255;\red48\green111\blue121;\red32\green60\blue63;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20840\viewh14500\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 1.
+\f1 \'c9\'e8\'d6\'c3
+\f0 tableviewCell
+\f1 \'b5\'c4\'b8\'df\'c1\'c1\'b5\'c4\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f0\fs24 \
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \CocoaLigature0 //
+\f1 \'c9\'e8\'d6\'c3\'d1\'a1\'d6\'d0\'ca\'b1
+\f2 cell
+\f1 \'b5\'c4\'b8\'df\'c1\'c1\'b5\'c4\'d1\'d5\'c9\'ab
+\f2 \cf0 \
+    cell.\cf3 selectedBackgroundView\cf0  = [[\cf3 UIView\cf0  \cf4 alloc\cf0 ] \cf4 initWithFrame\cf0 :cell.\cf3 frame\cf0 ];\
+    cell.\cf3 selectedBackgroundView\cf0 .\cf3 backgroundColor\cf0  = [\cf3 UIColor\cf0  \cf4 brownColor\cf0 ];\
+\cf2 2.
+\f1 \'c9\'e8\'d6\'c3
+\f2 tableviewCell
+\f1 \'c4\'c4\'d0\'d0\'bf\'c9\'d2\'d4\'d1\'a1\'d6\'d0\'d1\'a1\'b2\'bb\'d6\'d0 \'b8\'df\'c1\'c1\'b5\'c4
+\f2 \
+/**\
+ * 
+\f1 \'c9\'e8\'d6\'c3\'c4\'c4\'d0\'d0\'bf\'c9\'d2\'d4\'b8\'df\'c1\'c1
+\f2  
+\f1 \'bf\'c9\'d2\'d4\'d1\'a1\'d6\'d0
+\f2 \
+ */\cf0 \
+-(\cf5 BOOL\cf0 )tableView:(\cf3 UITableView\cf0  *)tableView shouldHighlightRowAtIndexPath:(\cf3 NSIndexPath\cf0  *)indexPath\{\
+    \cf5 if\cf0  (indexPath.\cf3 row\cf0 ==\cf6 2\cf0 ) \{\
+        \cf5 return\cf0  \cf5 NO\cf0 ;\
+    \}\
+    \cf5 return\cf0  \cf5 YES\cf0 ;\
+\}\
+\
+3.
+\f1 \'d3\'a6\'d3\'c3\'bc\'e4\'b5\'c4\'cd\'a8\'d0\'c5\'a3\'ba\
+	1\'a3\'a9.\'d5\'b3\'cc\'f9\'b0\'e5\'a3\'ac\'b8\'f9\'be\'dd\'c9\'e8\'d6\'c3\'d5\'b3\'cc\'f9\'b0\'e5\'b5\'c4\'c3\'fb\'d7\'d6  \'bb\'f1\'c8\'a1\'d5\'b3\'cc\'f9\'b0\'e5\'d2\'b2\'b8\'f9\'be\'dd\'c3\'fb\'d7\'d6\
+	2\'a3\'a9.urlSchems  \'d4\'bc\'b6\'a8\'ba\'c3\'b8\'f1\'ca\'bd\'a3\'acopenUrl\'c0\'ef\'bd\'f8\'d0\'d0\'bd\'e2\'ce\'f6\'a1\'a3\
+	3\'a3\'a9.keyChain \'d4\'bf\'b3\'d7\'c1\'b4\'ca\'fd\'be\'dd\'b4\'e6\'b4\'a2\
+\
+4.\'b6\'a8\'d2\'e5\'b4\'fa\'c0\'ed\'b5\'c4\'b7\'bd\'b7\'a8\
+
+\f2 \cf2 //
+\f1 \'b6\'a8\'d2\'e5\'d0\'ad\'d2\'e9
+\f2  item
+\f1 \'b1\'bb\'b5\'e3\'bb\'f7\'b5\'c4\'b7\'bd\'b7\'a8
+\f2  
+\f1 \'b0\'d1\'d7\'d4\'bc\'ba\'b4\'ab\'b9\'fd\'c8\'a5\'b7\'bd\'b1\'e3\'b1\'ea\'ca\'b6\'a3\'a8\'d2\'bb\'b0\'e3\'d7\'d4\'bc\'ba\'d5\'e2\'b8\'f6\'b2\'ce\'ca\'fd\'b6\'bc\'ca\'c7\'b1\'d8\'b2\'bb\'bf\'c9\'c9\'d9\'b5\'c4\'a3\'a9\
+@required \'b1\'d8\'d0\'eb\'ca\'b5\'cf\'d6\'b5\'c4  @optional \'b2\'bb\'b1\'d8\'d0\'eb\'ca\'b5\'cf\'d6\'b5\'c4  \'b4\'fa\'c0\'ed\'d3\'c3weak\'d0\'de\'ca\'ce   \'b2\'bb\'c8\'bb\'bb\'e1\'d1\'ad\'bb\'b7\'d2\'fd\'d3\'c3\'d4\'ec\'b3\'c9
+\f2 \cf0 \
+\cf5 @protocol\cf0   LBSearchCollectionCellDelegate<\cf3 NSObject\cf0 >\
+-(\cf5 void\cf0 )lbSearchCollectionCellButtonClicked:(\cf7 LBSearchCollectionCell\cf0  *)cell;\
+\cf5 @end\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\f1 \cf5 \'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed\'ca\'f4\'d0\'d4
+\f2 \
+@property\cf0  (\cf5 nonatomic\cf0 ,\cf5 weak\cf0 )\cf5 id\cf0 <\cf7 LBSearchCollectionCellDelegate\cf0 > delegate;\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\f1 \cf0 \'c5\'d0\'b6\'cf\'ca\'c7\'b7\'f1\'ca\'b5\'cf\'d6\'c1\'cb\'b4\'fa\'c0\'ed
+\f2   
+\f1 \'b5\'f7\'d3\'c3\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8
+\f2 \
+\cf5 if\cf0 ([\cf5 self\cf0 .\cf7 delegate\cf0  \cf4 respondsToSelector\cf0 :\cf5 @selector\cf0 (lbSearchCollectionCellButtonClicked:)])\{\
+        [\cf5 self\cf0 .\cf7 delegate\cf0  \cf8 lbSearchCollectionCellButtonClicked\cf0 :\cf5 self\cf0 ];\
+    \}\
+\
+5.
+\f1 \'b6\'a8\'d2\'e5
+\f2 block
+\f1 \'b7\'bd\'b7\'a8
+\f2 \
+\cf5 typedef\cf0  \cf5 void\cf0 (^ButtonOnClicked)(\cf3 NSString\cf0  *text);\
+//1.
+\f1 \'b5\'da\'d2\'bb\'d6\'d6\'ca\'c7\'b0\'d1block\'b6\'a8\'d2\'e5\'b3\'c9\'ca\'f4\'d0\'d4\'b5\'c4\'b7\'bd\'ca\'bd\'d3\'c3
+\f2 \
+\cf5 @property\cf0  (\cf5 nonatomic\cf0 ,\cf5 copy\cf0 )\cf7 ButtonOnClicked\cf0  buttonClickedBlock;\
+ \cf5 if\cf0 (\cf5 self\cf0 .\cf7 buttonClickedBlock\cf0 )\{\
+        \cf5 self\cf0 .\cf7 buttonClickedBlock\cf0 (button.\cf3 titleLabel\cf0 .\cf3 text\cf0 );\
+    \}\
+headerView.\cf7 buttonClickedBlock\cf0 =^(\cf3 NSString\cf0  *text)\{\
+            \cf9 MyLog\cf0 (\cf10 @"text is %@ "\cf0 ,text);\
+            \cf2 //1.
+\f1 \'c7\'e5\'bf\'d5\'b0\'b4\'c5\'a5\'b5\'e3\'bb\'f7\'b5\'c4\'ca\'b1\'ba\'f2
+\f2    
+\f1 \'c7\'e5\'bf\'d5\'ca\'fd\'d7\'e9\'a3\'ac\'c7\'e5\'bf\'d5\'ca\'fd\'be\'dd\'bf\'e2\'b5\'c4\'c0\'fa\'ca\'b7\'bc\'c7\'c2\'bc\'a3\'ac\'c7\'e5\'bf\'d5
+\f2 section
+\f1 \'b5\'c4\'c0\'fa\'ca\'b7\'bc\'c7\'c2\'bc\'b6\'d4\'cf\'f3
+\f2 \cf0 \
+            [\cf5 self\cf0  \cf8 clearSearchHistory\cf0 ];\
+            \cf2 //2.
+\f1 \'cb\'a2\'d0\'c2
+\f2 collectionview\cf0 \
+            [\cf7 _collectionView\cf0  \cf4 reloadData\cf0 ];\
+        \};\
+//2.
+\f1 \'b5\'da\'b6\'fe\'d6\'d6\'ca\'c7\'b0\'d1
+\f2 block
+\f1 \'b5\'b1\'b7\'bd\'b7\'a8\'b2\'ce\'ca\'fd\'ca\'b9\'d3\'c3
+\f2  \
+\pard\tx866\pardeftab866\pardirnatural\partightenfactor0
+
+\fs36 \cf0 -(\cf11 instancetype\cf0 )initWithTitle:(\cf12 NSString\cf0  *)title image:(\cf12 UIImage\cf0  *)image titleColor:(\cf12 UIColor\cf0  *)titleColor onClicked:(\cf13 LBActionSheetItemOnClicked\cf0 )onClicked;
+\fs32 \
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+\cf0 \
+6.
+\f1 \'bb\'f1\'c8\'a1\'d2\'bb\'b8\'f6
+\f2 view
+\f1 \'d4\'da\'c1\'ed\'cd\'e2\'b8\'f6
+\f2 view
+\f1 \'b5\'c4\'d7\'f8\'b1\'ea\'b5\'c4\'b7\'bd\'b7\'a8
+\f2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs28 \cf14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'ca\'b9\'d3\'c3
+\f0  convertRect: fromView: 
+\f1 \'bb\'f2\'d5\'df
+\f0  convertRect: toView:\
+
+\f1 \'c0\'fd\'c8\'e7\'d2\'bb\'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4
+\f0 view
+\f1 \'d6\'d0\'d3\'d0\'d2\'bb\'b8\'f6
+\f0 UITableView
+\f1 \'a3\'ac
+\f0 UITableView
+\f1 \'b5\'c4\'c4\'b3\'b8\'f6
+\f0 cell
+\f1 \'d6\'d0\'d3\'d0\'b8\'f6
+\f0 UITextField
+\f1 \'a3\'ac\'cf\'eb\'d2\'aa\'b5\'c3\'b5\'bd
+\f0 UITextField
+\f1 \'d4\'da
+\f0 view
+\f1 \'d6\'d0\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'be\'cd\'d2\'aa\'bf\'bf\'c9\'cf\'c3\'e6\'b5\'c4\'c1\'bd\'b8\'f6\'b7\'bd\'b7\'a8\'c1\'cb\'a1\'a3
+\f0 \
+
+\f1 \'d3\'c3
+\f0 \
+CGRect rect = [self.view convertRect:textField.frame fromView:textField.superview];\
+
+\f1 \'bb\'f2\'d5\'df
+\f0 \
+CGRect rect = [textField.superview convertRect:textField.frame toView:self.view];\
+
+\f1 \'bd\'f8\'d0\'d0\'d7\'aa\'bb\'bb\'b6\'bc\'bf\'c9\'d2\'d4
+\f0 \
+\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 //
+\f1 \'ca\'a7\'c8\'a5\'bd\'b9\'b5\'e3 \'be\'cd\'b2\'bb\'c4\'dc\'bd\'f8\'d0\'d0\'bd\'bb\'bb\'a5
+\f2 \cf0 \
+- (\cf5 void\cf0 )applicationWillResignActive:(\cf3 UIApplication\cf0  *)application \{\
+     \cf9 MyLog\cf0 (\cf10 @"applicationWillResignActive===================="\cf0 );\
+\}
+\f0\fs28 \cf14 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\f2\fs32 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 //
+\f1 \'cd\'cb\'b3\'f6\'b5\'bd\'ba\'f3\'cc\'a8
+\f2 \cf0 \
+- (\cf5 void\cf0 )applicationDidEnterBackground:(\cf3 UIApplication\cf0  *)application \{\
+     \cf9 MyLog\cf0 (\cf10 @"applicationDidEnterBackground===================="\cf0 );\
+\}\
+\
+\cf2 //
+\f1 \'bd\'f8\'c8\'eb\'c7\'b0\'cc\'a8
+\f2 \cf0 \
+- (\cf5 void\cf0 )applicationWillEnterForeground:(\cf3 UIApplication\cf0  *)application \{\
+     \cf9 MyLog\cf0 (\cf10 @"applicationWillEnterForeground===================="\cf0 );\
+\}\
+\
+\cf2 //
+\f1 \'bc\'a4\'bb\'ee\'bd\'b9\'b5\'e3
+\f2 \cf0 \
+- (\cf5 void\cf0 )applicationDidBecomeActive:(\cf3 UIApplication\cf0  *)application \{\
+    \cf9 MyLog\cf0 (\cf10 @"applicationDidBecomeActive===================="\cf0 );\
+\}\
+\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+\cf10 https://api.weibo.com/2/statuses/repost_timeline.json
+\f1 ?
+\f2 access_token=
+\f3\b\fs22 \cf0 2.00qXxMZG00AmKre173dc4015HZoEXC&
+\f2\b0\fs32 \cf10 id=
+\f3\b\fs22 \cf0 4029804405221587\
+\
+\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\fs28 \cf0 7.
+\f1 \'b6\'e0\'bd\'f8\'b3\'cc\'b5\'c4\'b3\'cc\'d0\'f2\'b1\'c8\'b6\'e0\'cf\'df\'b3\'cc\'b5\'c4\'b3\'cc\'d0\'f2\'bd\'a1\'d7\'b3\'ba\'dc\'b6\'e0\'a3\'ac\'d2\'f2\'ce\'aa\'bd\'f8\'b3\'cc\'d3\'d0\'d7\'d4\'bc\'ba\'b5\'c4\'b5\'d8\'d6\'b7\'bf\'d5\'bc\'e4\'a3\'ac\'d2\'bb\'b8\'f6\'bd\'f8\'b3\'cc\'b1\'c0\'c0\'a3\'b2\'bb\'bb\'e1\'d3\'b0\'cf\'ec\'b5\'bd\'b1\'f0\'b5\'c4\'bd\'f8\'b3\'cc\'a3\'ac\'cf\'df\'b3\'cc\'c3\'bb\'d3\'d0\'d7\'d4\'bc\'ba\'b5\'c4\'b5\'a5\'b6\'c0\'b5\'d8\'d6\'b7\'bf\'d5\'bc\'e4\'a3\'ac\'d6\'bb\'d3\'d0\'d7\'d4\'bc\'ba\'b5\'c4\'b6\'d1\'d5\'bb\'ba\'cd\'be\'d6\'b2\'bf\'b1\'e4\'c1\'bf\'a3\'ac\'cb\'f9\'d2\'d4\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'b9\'d2\'c1\'cb\'be\'cd\'b5\'c8\'d2\'d4\'d5\'fb\'b8\'f6\'bd\'f8\'b3\'cc\'cb\'c0\'b5\'f4\'c1\'cb\'a1\'a3\'c7\'d0\'bb\'bb\'bd\'f8\'b3\'cc\'cf\'fb\'ba\'c4\'b1\'c8\'bd\'cf\'b4\'f3\
+8.\'c0\'e0\'b9\'a4\'b3\'a7\'b7\'bd\'b7\'a8  \'ca\'c7\'ce\'aa\'c1\'cb\'cf\'f2\'bf\'cd\'bb\'a7\'cc\'e1\'b9\'a9\'b7\'bd\'b1\'e3  \'bd\'ab\'b7\'d6\'c5\'e4\'ba\'cd\'b3\'f5\'ca\'bc\'bb\'af\'d4\'da\'d2\'bb\'b8\'f6\'b2\'bd\'d6\'e8\'d6\'d0\'a3\'ac\'b7\'b5\'bb\'d8\'b1\'bb\'b4\'b4\'bd\'a8\'b5\'c4\'b6\'d4\'cf\'f3\'a3\'ac\'bd\'f8\'d0\'d0\'d7\'d4\'b6\'af\'ca\'cd\'b7\'c5\'b4\'a6\'c0\'ed\'a1\'a3\
+\
+9.tableview\'b5\'c4\'d3\'c5\'bb\'af   \'d4\'da\'cd\'cf\'b6\'af\'ba\'cd\'bb\'ac\'b6\'af\'d6\'d0\'b2\'bb\'d2\'ec\'b2\'bd\'d6\'b4\'d0\'d0\'d2\'bb\'d0\'a9\'ba\'c4\'ca\'b1\'b5\'c4\'b2\'d9\'d7\'f7  \'b1\'c8\'c8\'e7\'d4\'da\'b7\'b5\'bb\'d8cell\'b5\'c4\'b7\'bd\'b7\'a8\'d6\'d0\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\f2\b0\fs32 \cf5 self\cf0 .\cf3 tableView\cf0 .\cf4 isDragging\cf0 ==\cf5 YES\cf0 ;\
+         \cf5 self\cf0 .tableView.decelerating=\cf5 YES\cf0 ; 
+\f1 \'ca\'b1\'b2\'bb\'c8\'a5\'d6\'b4\'d0\'d0\'ba\'c4\'ca\'b1\'b5\'c4\'cd\'bc\'c6\'ac\'b2\'d9\'d7\'f7
+\f3\b\fs22 \
+\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f2\b0\fs36 \cf15 mark //
+\f1 \'c7\'b3
+\f2 Copy
+\f1 \'a3\'ba\'bf\'c9\'d2\'d4\'c0\'ed\'bd\'e2\'ce\'aa\'d6\'b8\'d5\'eb\'b5\'c4\'b8\'b4\'d6\'c6\'a3\'ac\'d6\'bb\'ca\'c7\'b6\'e0\'c1\'cb\'d2\'bb\'b8\'f6\'d6\'b8\'cf\'f2\'d5\'e2\'bf\'e9\'c4\'da\'b4\'e6\'b5\'c4\'d6\'b8\'d5\'eb\'a3\'ac\'b9\'b2\'d3\'c3\'d2\'bb\'bf\'e9\'c4\'da\'b4\'e6\'a1\'a3
+\f2 \cf0 \
+\cf15 //
+\f1 \'c9\'ee
+\f2 Copy:
+\f1 \'c0\'ed\'bd\'e2\'ce\'aa\'c4\'da\'b4\'e6\'b5\'c4\'b8\'b4\'d6\'c6\'a3\'ac\'c1\'bd\'bf\'e9\'c4\'da\'b4\'e6\'ca\'c7\'cd\'ea\'c8\'ab\'b2\'bb\'cd\'ac\'b5\'c4\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'c1\'bd\'b8\'f6\'b6\'d4\'cf\'f3\'d6\'b8\'d5\'eb\'b7\'d6\'b1\'f0\'d6\'b8\'cf\'f2\'b2\'bb\'cd\'ac\'b5\'c4\'c4\'da\'b4\'e6\'a3\'ac\'bb\'a5\'b2\'bb\'b8\'c9\'c9\'e6\'a1\'a3
+\f2 \cf0 \
+-(\cf11 void\cf0 )testCopyStrongString\{\
+    \cf12 NSMutableString\cf0  *mutaString1=[[\cf12 NSMutableString\cf0  \cf4 alloc\cf0 ] \cf4 initWithString\cf0 :\cf16 @"mutaString1"\cf0 ];\
+    \cf12 NSMutableString\cf0  *mutaString2=[[\cf12 NSMutableString\cf0  \cf4 alloc\cf0 ] \cf4 initWithString\cf0 :\cf16 @"mutaString2"\cf0 ];\
+    \cf15 //1.
+\f1 \'d5\'e2\'d6\'d6\'d6\'bb\'ca\'c7\'bc\'f2\'b5\'a5\'b5\'c4\'b8\'b3\'d6\'b5
+\f2   
+\f1 \'cb\'f9\'d2\'d4\'bb\'b9\'ca\'c7\'c7\'b3\'bf\'bd\'b1\'b4
+\f2    
+\f1 \'b6\'e0\'c1\'cb\'d2\'bb\'b8\'f6\'d6\'b8\'cf\'f2\'cd\'ac\'d2\'bb\'bf\'e9\'c4\'da\'b4\'e6\'b5\'d8\'d6\'b7\'b5\'c4\'b6\'d4\'cf\'f3
+\f2   
+\f1 \'d2\'aa\'b1\'e4\'b6\'bc\'b1\'e4
+\f2 \cf0 \
+\cf15 //    _copString=mutaString1;\cf0 \
+\cf15 //    _stroString=mutaString2;\cf0 \
+    \cf15 //2.
+\f1 \'d5\'e2\'d6\'d6\'bb\'e1\'b5\'f7\'d3\'c3\'ca\'f4\'d0\'d4\'b5\'c4
+\f2 set
+\f1 \'b7\'bd\'b7\'a8
+\f2   
+\f1 \'bb\'e1\'cf\'c8
+\f2 copy
+\f1 \'d4\'da
+\f2 release  
+\f1 \'cb\'f9\'d2\'d4
+\f2 copy
+\f1 \'d0\'de\'ca\'ce\'b5\'c4\'bb\'e1\'bf\'bd\'b1\'b4\'b3\'f6\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'c4\'da\'b4\'e6\'b5\'d8\'d6\'b7\'ba\'cd\'b6\'d4\'cf\'f3
+\f2   
+\f1 \'b6\'f8
+\f2 strong
+\f1 \'b2\'bb\'bb\'e1
+\f2  
+\f1 \'bb\'b9\'ca\'c7\'d6\'b8\'cf\'f2\'d4\'ad\'c0\'b4\'b5\'c4\'c4\'da\'b4\'e6
+\f2 \cf0 \
+    \cf11 self\cf0 .\cf13 copString\cf0 =mutaString1;\
+    \cf11 self\cf0 .\cf13 stroString\cf0 =mutaString2;\
+    [mutaString1 \cf4 appendString\cf0 :\cf16 @"copString"\cf0 ];\
+    [mutaString2 \cf4 appendString\cf0 :\cf16 @"strongStrimg"\cf0 ];\
+    \cf4 NSLog\cf0 (\cf16 @"_copString is %p %@ "\cf0 ,\cf13 _copString\cf0 ,\cf13 _copString\cf0 );\
+    \cf4 NSLog\cf0 (\cf16 @"mutaString1 is  %p %@ "\cf0 ,mutaString1,mutaString1);\
+    \cf4 NSLog\cf0 (\cf16 @"_strongString is %p %@ "\cf0 ,\cf13 _stroString\cf0 ,\cf13 _stroString\cf0 );\
+    \cf4 NSLog\cf0 (\cf16 @"mutaString2 is  %p %@ "\cf0 ,mutaString2,mutaString2);\
+    \cf4 NSLog\cf0 (\cf16 @"==============================================="\cf0 );\
+\}
+\f3\b\fs28 \
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+\cf0 \
+10.
+\f4\b0\fs32 \cf17 \expnd0\expndtw0\kerning0
+\CocoaLigature1 {{\NeXTGraphic 295346-bb5e2ddce05df82b.png \width24800 \height4940 \noorient
+}¬}
+\f3\b\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+
+\f1\fs28 mutableCopy \'b6\'bc\'ca\'c7\'c9\'ee\'bf\'bd\'b1\'b4\'a3\'ac\'bf\'bd\'b1\'b4\'b3\'f6\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'b6\'d4\'cf\'f3\'a3\'accopy\'b6\'d4\'d3\'daNSMutableString\'c0\'e0\'d0\'cd\'b5\'c4\'ca\'c7\'c9\'ee\'bf\'bd\'b1\'b4\'a3\'ac\'bf\'bd\'b1\'b4\'b3\'f6\'d2\'bb\'b8\'f6\'d0\'c2\'b6\'d4\'cf\'f3\'a3\'ac\'b6\'d4\'d3\'daNSString\'c0\'e0\'d0\'cd\'ca\'c7\'c7\'b3\'bf\'bd\'b1\'b4\'a3\'ac\'bb\'b9\'ca\'c7\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'a1\'a3\
+\'b5\'b1\'ca\'f4\'d0\'d4\'ca\'c7
+\f3 copy
+\f1 \'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'c8\'e7\'b9\'fb\'d4\'b4\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\'ca\'c7NSMutableString\'a3\'ac\'c9\'ee\'bf\'bd\'b1\'b4\'a3\'accopy\'b3\'f6\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'b6\'d4\'cf\'f3\'a3\'ac\'cb\'f9\'d2\'d4\'d4\'b4\'b6\'d4\'cf\'f3\'b8\'c4\'b1\'e4\'c1\'cb\'ce\'d2\'c3\'c7\'b5\'c4\'ca\'f4\'d0\'d4\'b2\'bb\'bb\'e1\'b1\'e4\'a3\'ac\'d5\'e2\'d2\'b2\'ca\'c7NSString\'c9\'e8\'d6\'c3\'b3\'c9copy\'b5\'c4\'d4\'ad\'d2\'f2\'a3\'ac\'b7\'c0\'d6\'b9\'d4\'b4\'b6\'d4\'cf\'f3\'b8\'c4\'b1\'e4\'c1\'cb\'b5\'bc\'d6\'c2\'ca\'f4\'d0\'d4\'d6\'b5\'b8\'c4\'b1\'e4\'c1\'cb\'a1\'a3\
+\'b5\'b1\'ca\'f4\'d0\'d4\'ca\'c7strong\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'c8\'e7\'b9\'fb\'d4\'b4\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\'ca\'c7NSMutableString\'a3\'ac\'c7\'b3\'bf\'bd\'b1\'b4\'a3\'ac\'d6\'b8\'cf\'f2\'cd\'ac\'d2\'bb\'bf\'e9\'c4\'da\'b4\'e6\'b5\'d8\'d6\'b7\'a3\'ac\'cb\'f9\'d2\'d4\'b5\'b1\'d4\'b4\'b6\'d4\'cf\'f3\'d6\'b5\'b1\'e4\'c1\'cb\'ca\'f4\'d0\'d4\'d6\'b5\'d2\'b2\'be\'cd\'b8\'fa\'d7\'c5\'b1\'e4\'c1\'cb\'a1\'a3\
+\
+\'b5\'b1\'ca\'f4\'d0\'d4\'ca\'c7
+\f3 copy
+\f1 \'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'c8\'e7\'b9\'fb\'d4\'b4\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\'ca\'c7NSString\'a3\'ac\'c7\'b3\'bf\'bd\'b1\'b4\'a3\'ac\'bb\'b9\'ca\'c7\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'a3\'acNSString\'d4\'b4\'b6\'d4\'cf\'f3\'d6\'bb\'c4\'dc\'cd\'a8\'b9\'fd\'b8\'b3\'d6\'b5\'b5\'c4\'b7\'bd\'ca\'bd\'b8\'c4\'b1\'e4\'a3\'ac\'d5\'e2\'d1\'f9\'bb\'e1\'b4\'d3\'d0\'c2\'d6\'b8\'cf\'f2\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'b5\'d8\'d6\'b7\'a3\'ac\'cb\'f9\'d2\'d4\'d5\'e2\'ca\'b1\'b5\'c4\'b8\'c4\'b1\'e4\'b2\'bb\'bb\'e1\'d2\'fd\'c6\'f0\'ca\'f4\'d0\'d4\'d6\'b5\'b5\'c4\'b8\'c4\'b1\'e4\'a3\'ac\'d2\'f2\'ce\'aa\'ca\'c7\'d0\'c2\'b5\'c4\'b5\'d8\'a1\'a3\
+\'b5\'b1\'ca\'f4\'d0\'d4\'ca\'c7strong\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'c8\'e7\'b9\'fb\'d4\'b4\'b6\'d4\'cf\'f3\'c0\'e0\'d0\'cd\'ca\'c7NSString\'a3\'ac\'c7\'b3\'bf\'bd\'b1\'b4\'a3\'ac\'ca\'c7\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'a3\'ac\'cd\'ac\'c9\'cf\'a1\'a3
+\fs22 \
+\
+\
+
+\fs28 11.\'d2\'bb\'b8\'f6\'bd\'e7\'c3\'e6\'d6\'d0\'d3\'d0\'b6\'e0\'b8\'f6UITableView\'bb\'f2\'d4\'f2Scrollview\'ca\'b1\'a3\'ac\'b5\'e3\'bb\'f7\'d7\'b4\'cc\'ac\'c0\'b8\'b2\'bb\'c4\'dc\'bb\'d8\'b5\'bd\'b6\'a5\'b2\'bf\'b5\'c4\'ce\'ca\'cc\'e2\'a3\'ba1.\'c8\'c3\'b5\'b1\'c7\'b0\'d0\'e8\'d2\'aa\'b9\'f6\'b6\'af\'b5\'c4scrollToTop\'c9\'e8\'d6\'c3\'b3\'c9yes\'b1\'f0\'b5\'c4\'c9\'e8\'d6\'c3\'b3\'c9false\'a1\'a32.\'c9\'e8\'d6\'c3\'b5\'b1\'c7\'b0\'d0\'e8\'d2\'aa\'b9\'f6\'b6\'af\'b5\'bd\'b6\'a5\'b2\'bf\'b5\'c4\'c9\'e8\'d6\'c3Hiddle=NO\'a3\'ac\'b1\'f0\'b5\'c4\'d2\'fe\'b2\'d8YES\'a1\'a3\
+\
+12.\'cb\'c0\'cb\'f8\'a3\'ac\uc0\u160 \'b5\'b1\'c7\'b0\'b4\'ae\'d0\'d0\'b6\'d3\'c1\'d0\'d6\'d0\'d3\'c3\'cd\'ac\'b2\'bd\'c7\'eb\'c7\'f3\'b5\'b1\'c7\'b0\'b6\'d3\'c1\'d0\'c8\'ce\'ce\'f1\'b5\'bc\'d6\'c2\'a1\'a3\'cb\'f9\'d2\'d4\'b4\'ae\'d0\'d0\'b6\'d3\'c1\'d0\'d6\'d0\'ca\'b9\'d3\'c3\'cd\'ac\'b2\'bd\'c7\'eb\'c7\'f3\'d2\'aa\'d7\'a2\'d2\'e2\'a3\'ac\'d7\'ee\'ba\'c3\'ca\'b9\'d3\'c3\'d2\'ec\'b2\'bd\'b5\'c4\'a1\'a3\
+\
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\fs32 \cf0 13.runtime \'d4\'cb\'d0\'d0\'ca\'b1\'bb\'fa\'d6\'c6\'a3\'ac\'cf\'fb\'cf\'a2\'a3\'ac\'b6\'af\'cc\'ac\'b7\'bd\'b7\'a8\'bd\'e2\'ce\'f6\'a3\'ac\'cf\'fb\'cf\'a2\'d7\'aa\'b7\'a2\'a1\'a3[receiver message]\'d4\'da\'b1\'e0\'d2\'eb\'ca\'b1\'c6\'da
+\b0 \cf17 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'cf\'f2\'bd\'d3\'ca\'d5\'d5\'df\'b7\'a2\'cb\'cd
+\f4 message
+\f1 \'d5\'e2\'cc\'f5\'cf\'fb\'cf\'a2\'a3\'ac\'b6\'f8
+\f4 receive
+\f1 \'bd\'ab\'d2\'aa\'c8\'e7\'ba\'ce\'cf\'ec\'d3\'a6\'d5\'e2\'cc\'f5\'cf\'fb\'cf\'a2\'a3\'ac\'c4\'c7\'be\'cd\'d2\'aa\'bf\'b4\'d4\'cb\'d0\'d0\'ca\'b1\'b7\'a2\'c9\'fa\'b5\'c4\'c7\'e9\'bf\'f6\'c0\'b4\'be\'f6\'b6\'a8\'c1\'cb\'a1\'a3
+\b\fs28 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs32 \cf17 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Runtime 
+\f1 \'bb\'f9\'b1\'be\'ca\'b9\'d3\'c3
+\f4 C
+\f1 \'ba\'cd\'bb\'e3\'b1\'e0\'d0\'b4\'b5\'c4\
+
+\f4 Runtime 
+\f1 \'cf\'b5\'cd\'b3\'ca\'c7\'d2\'bb\'b8\'f6\'d3\'c9\'d2\'bb\'cf\'b5\'c1\'d0\'ba\'af\'ca\'fd\'ba\'cd\'ca\'fd\'be\'dd\'bd\'e1\'b9\'b9\'d7\'e9\'b3\'c9\'a3\'ac\'be\'df\'d3\'d0\'b9\'ab\'b9\'b2\'bd\'d3\'bf\'da\'b5\'c4\'b6\'af\'cc\'ac\'b9\'b2\'cf\'ed\'bf\'e2\'a1\'a3\'cd\'b7\'ce\'c4\'bc\'fe\'b4\'e6\'b7\'c5\'d3\'da
+\f4 /usr/include/objc
+\f1 \'c4\'bf\'c2\'bc\'cf\'c2
+\b\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs28 \cf18 \cb19 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Objective-C 
+\f1 \'b5\'c4
+\f4  Runtime 
+\f1 \'ca\'c7\'d2\'bb\'b8\'f6\'d4\'cb\'d0\'d0\'ca\'b1\'bf\'e2\'a3\'a8
+\f4 Runtime Library
+\f1 \'a3\'a9\'a3\'ac\'cb\'fc\'ca\'c7\'d2\'bb\'b8\'f6\'d6\'f7\'d2\'aa\'ca\'b9\'d3\'c3
+\f4  C 
+\f1 \'ba\'cd\'bb\'e3\'b1\'e0\'d0\'b4\'b5\'c4\'bf\'e2\'a3\'ac\'ce\'aa
+\f4  C 
+\f1 \'cc\'ed\'bc\'d3\'c1\'cb\'c3\'e6\'cf\'e0\'b6\'d4\'cf\'f3\'b5\'c4\'c4\'dc\'c1\'a6\'b2\'a2\'b4\'b4\'d4\'ec\'c1\'cb
+\f4  Objective-C
+\f1 \'a1\'a3\'d5\'e2\'be\'cd\'ca\'c7\'cb\'b5\'cb\'fc\'d4\'da\'c0\'e0\'d0\'c5\'cf\'a2\'a3\'a8
+\f4 Class information
+\f1 \'a3\'a9
+\f4  
+\f1 \'d6\'d0\'b1\'bb\'bc\'d3\'d4\'d8\'a3\'ac\'cd\'ea\'b3\'c9\'cb\'f9\'d3\'d0\'b5\'c4\'b7\'bd\'b7\'a8\'b7\'d6\'b7\'a2\'a3\'ac\'b7\'bd\'b7\'a8\'d7\'aa\'b7\'a2\'a3\'ac\'b5\'c8\'b5\'c8\'a1\'a3
+\f4 Objective-C runtime 
+\f1 \'b4\'b4\'bd\'a8\'c1\'cb\'cb\'f9\'d3\'d0\'d0\'e8\'d2\'aa\'b5\'c4\'bd\'e1\'b9\'b9\'cc\'e5\'a3\'ac\'c8\'c3
+\f4  Objective-C 
+\f1 \'b5\'c4\'c3\'e6\'cf\'e0\'b6\'d4\'cf\'f3\'b1\'e0\'b3\'cc\'b1\'e4\'ce\'aa\'bf\'c9\'c4\'dc
+\f5 \cf20 \cb1 1.
+\f1 \'d4\'da\'b3\'cc\'d0\'f2\'d4\'cb\'d0\'d0\'b9\'fd\'b3\'cc\'d6\'d0
+\f5 , 
+\f1 \'b6\'af\'cc\'ac\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'c0\'e0
+\f5 (
+\f1 \'b1\'c8\'c8\'e7
+\f5 KVO
+\f1 \'b5\'c4\'b5\'d7\'b2\'e3\'ca\'b5\'cf\'d6
+\f5 )\
+2.
+\f1 \'d4\'da\'b3\'cc\'d0\'f2\'d4\'cb\'d0\'d0\'b9\'fd\'b3\'cc\'d6\'d0
+\f5 , 
+\f1 \'b6\'af\'cc\'ac\'b5\'d8\'ce\'aa\'c4\'b3\'b8\'f6\'c0\'e0\'cc\'ed\'bc\'d3\'ca\'f4\'d0\'d4
+\f5 \\
+\f1 \'b7\'bd\'b7\'a8
+\f5 , 
+\f1 \'d0\'de\'b8\'c4\'ca\'f4\'d0\'d4\'d6\'b5
+\f5 \\
+\f1 \'b7\'bd\'b7\'a8\
+
+\f5 3.
+\f1 \'b1\'e9\'c0\'fa\'d2\'bb\'b8\'f6\'c0\'e0\'b5\'c4\'cb\'f9\'d3\'d0\'b3\'c9\'d4\'b1\'b1\'e4\'c1\'bf
+\f5 (
+\f1 \'ca\'f4\'d0\'d4
+\f5 )\\
+\f1 \'cb\'f9\'d3\'d0\'b7\'bd\'b7\'a8\
+\'cf\'d6\'d4\'da\'c8\'c3\'ce\'d2\'c3\'c7\'bf\'b4\'d2\'bb\'cf\'c2
+\f5 objc_msgSend
+\f1 \'cb\'fc\'be\'df\'cc\'e5\'ca\'c7\'c8\'e7\'ba\'ce\'b7\'a2\'cb\'cd\'cf\'fb\'cf\'a2
+\f5 :\
+
+\f1 \'a1\'a1\'a1\'a1
+\f5 1.
+\f1 \'ca\'d7\'cf\'c8\'b8\'f9\'be\'dd
+\f5 receiver
+\f1 \'b6\'d4\'cf\'f3\'b5\'c4
+\f5 isa
+\f1 \'d6\'b8\'d5\'eb\'bb\'f1\'c8\'a1\'cb\'fc\'b6\'d4\'d3\'a6\'b5\'c4
+\f5 class\
+
+\f1 \'a1\'a1\'a1\'a1
+\f5 2.
+\f1 \'d3\'c5\'cf\'c8\'d4\'da
+\f5 class
+\f1 \'b5\'c4
+\f5 cache
+\f1 \'b2\'e9\'d5\'d2
+\f5 message
+\f1 \'b7\'bd\'b7\'a8\'a3\'ac\'c8\'e7\'b9\'fb\'d5\'d2\'b2\'bb\'b5\'bd\'a3\'ac\'d4\'d9\'b5\'bd
+\f5 methodLists
+\f1 \'b2\'e9\'d5\'d2
+\f5 \
+
+\f1 \'a1\'a1\'a1\'a1
+\f5 3.
+\f1 \'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'d4\'da
+\f5 class
+\f1 \'d5\'d2\'b5\'bd\'a3\'ac\'d4\'d9\'b5\'bd
+\f5 super_class
+\f1 \'b2\'e9\'d5\'d2
+\f5 \
+
+\f1 \'a1\'a1\'a1\'a1
+\f5 4.
+\f1 \'d2\'bb\'b5\'a9\'d5\'d2\'b5\'bd
+\f5 message
+\f1 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'ac\'be\'cd\'d6\'b4\'d0\'d0\'cb\'fc\'ca\'b5\'cf\'d6\'b5\'c4
+\f5 IMP\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30 \cf17 \cb21 \'ca\'b9\'d3\'c3
+\f4 objc_setAssociatedObject
+\f1 \'a3\'ac\'d0\'e8\'d2\'aa\'d2\'fd\'c8\'eb\'cd\'b7\'ce\'c4\'bc\'fe
+\f4  
+\f2\fs24 \cf22 \cb23 #import <objc/runtime.h>\
+\pard\pardeftab720\partightenfactor0
+
+\f6\fs40 \cf24 \cb1 \'ce\'aa\'ca\'b2\'c3\'b4\'ce\'d2\'cb\'b5\'d5\'e2\'b8\'f6\'ba\'dc\'d3\'d0\'d3\'c3\'c4\'d8\'a3\'bf\'d2\'f2\'ce\'aa\'d5\'e2\'d4\'ca\'d0\'ed\'bf\'aa\'b7\'a2\'d5\'df
+\b \'b6\'d4\'d2\'d1\'be\'ad\'b4\'e6\'d4\'da\'b5\'c4\'c0\'e0\'d4\'da\'c0\'a9\'d5\'b9\'d6\'d0\'cc\'ed\'bc\'d3\'d7\'d4\'b6\'a8\'d2\'e5\'b5\'c4\'ca\'f4\'d0\'d4
+\b0 \'a3\'ac\'d5\'e2\'bc\'b8\'ba\'f5\'c3\'d6\'b2\'b9\'c1\'cb{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/ios/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html"}}{\fldrslt 
+\f7 \cf25 Objective-C
+\f6 \'d7\'ee\'b4\'f3\'b5\'c4\'c8\'b1\'b5\'e3}}\'a1\'a3\
+\
+14.runLoop:
+\f4\fs32 \cf17 Runloop
+\f1 \'b5\'c4\'bc\'c4\'c9\'fa\'d3\'da\'cf\'df\'b3\'cc\'a3\'ba\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'d6\'bb\'c4\'dc\'d3\'d0\'ce\'a8\'d2\'bb\'b6\'d4\'d3\'a6\'b5\'c4
+\f4 runloop
+\f1 \'a3\'bb\'b5\'ab\'d5\'e2\'b8\'f6\'b8\'f9
+\f4 runloop
+\f1 \'c0\'ef\'bf\'c9\'d2\'d4\'c7\'b6\'cc\'d7\'d7\'d3
+\f4 runloops
+\f1 \'a3\'bb\'d7\'d4\'b6\'af\'ca\'cd\'b7\'c5\'b3\'d8\'bc\'c4\'c9\'fa\'d3\'da
+\f4 Runloop\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf22 \cb23 a 
+\f1 \'d6\'f7\'cf\'df\'b3\'cc\'b5\'c4
+\f2 runloop
+\f1 \'d7\'d4\'b6\'af\'b4\'b4\'bd\'a8\'a3\'ac\'d7\'d3\'cf\'df\'b3\'cc\'b5\'c4
+\f2 runloop
+\f1 \'c4\'ac\'c8\'cf\'b2\'bb\'b4\'b4\'bd\'a8\'a3\'a8\'d4\'da\'d7\'d3\'cf\'df\'b3\'cc\'d6\'d0\'b5\'f7\'d3\'c3
+\f2 \cf26 NSRunLoop\cf22  *runloop = [\cf26 NSRunLoop\cf22  currentRunLoop];\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf22 \'bb\'f1\'c8\'a1
+\f2 RunLoop
+\f1 \'b6\'d4\'cf\'f3\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'be\'cd\'bb\'e1\'b4\'b4\'bd\'a8
+\f2 RunLoop
+\f1 \'a3\'a9\'a3\'bb
+\f2 \
+\
+b runloop
+\f1 \'cd\'cb\'b3\'f6\'b5\'c4\'cc\'f5\'bc\'fe\'a3\'ba
+\f2 app
+\f1 \'cd\'cb\'b3\'f6\'a3\'bb\'cf\'df\'b3\'cc\'b9\'d8\'b1\'d5\'a3\'bb\'c9\'e8\'d6\'c3\'d7\'ee\'b4\'f3\'ca\'b1\'bc\'e4\'b5\'bd\'c6\'da\'a3\'bb
+\f2 modeItem
+\f1 \'ce\'aa\'bf\'d5\'a3\'bb
+\f2 \
+\
+c 
+\f1 \'cd\'ac\'d2\'bb\'ca\'b1\'bc\'e4\'d2\'bb\'b8\'f6
+\f2 runloop
+\f1 \'d6\'bb\'c4\'dc\'d4\'da\'d2\'bb\'b8\'f6
+\f2 mode
+\f1 \'a3\'ac\'c7\'d0\'bb\'bb
+\f2 mode
+\f1 \'d6\'bb\'c4\'dc\'cd\'cb\'b3\'f6
+\f2 runloop
+\f1 \'a3\'ac\'d4\'d9\'d6\'d8\'bd\'f8\'d6\'b8\'b6\'a8
+\f2 mode
+\f1 \'a3\'a8\'b8\'f4\'c0\'eb
+\f2 modeItems
+\f1 \'ca\'b9\'d6\'ae\'bb\'a5\'b2\'bb\'b8\'c9\'c8\'c5\'a3\'a9\'a3\'bb
+\f2 \
+\
+d 
+\f1 \'d2\'bb\'b8\'f6
+\f2 item
+\f1 \'bf\'c9\'d2\'d4\'bc\'d3\'b5\'bd\'b2\'bb\'cd\'ac
+\f2 mode
+\f1 \'a3\'bb\'d2\'bb\'b8\'f6
+\f2 mode
+\f1 \'b1\'bb\'b1\'ea\'bc\'c7\'b5\'bd
+\f2 commonModes
+\f1 \'c0\'ef\'a3\'a8\'d5\'e2\'d1\'f9
+\f2 runloop
+\f1 \'b2\'bb\'d3\'c3\'c7\'d0\'bb\'bb
+\f2 mode
+\f1 \'a3\'a9\'a1\'a3\
+e.\'d2\'bb\'b8\'f6vc\'b5\'c4runloop\'bf\'aa\'c6\'f4\'d3\'daviewwillappear  \'bd\'e1\'ca\'f8\'d3\'daviewwilldisappear  \'cb\'f9\'d2\'d4\'d4\'da\'d5\'e2\'c1\'bd\'b8\'f6\'d6\'d0\'bc\'e4\'d6\'ae\'cd\'e2\'b5\'c4\'ca\'b1\'bc\'e4\'d5\'e2\'b8\'f6vc\'ca\'c7\'bd\'d3\'ca\'dc\'b2\'bb\'c1\'cb\'ca\'c2\'bc\'fe\'b5\'c4
+\b\fs22 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\partightenfactor0
+
+\b0\fs28 \cf27 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'ca\'b9\'d3\'c3
+\f5 \'a0run loop
+\f1 \'b5\'c4\'c4\'bf\'b5\'c4\'ca\'c7\'c8\'c3\'c4\'e3\'b5\'c4\'cf\'df\'b3\'cc\'d4\'da\'d3\'d0\'b9\'a4\'d7\'f7\'b5\'c4\'ca\'b1\'ba\'f2\'c3\'a6\'d3\'da\'b9\'a4\'d7\'f7
+\f5 ,
+\f1 \'b6\'f8\'c3\'bb\'b9\'a4\'d7\'f7\'b5\'c4\'ca\'b1\'ba\'f2\'b4\'a6\'d3\'da\'d0\'dd\'c3\'df\'d7\'b4\'cc\'ac\'a3\'ac\'b8\'fc\'ba\'cf\'c0\'ed\'b5\'c4\'c0\'fb\'d3\'c3\'d7\'ca\'d4\'b4\'a1\'a3\
+\'c3\'bf\'b8\'f6\'cf\'df\'b3\'cc\'b6\'bc\'d3\'d0runloop \'b5\'ab \'d6\'f7\'cf\'df\'b3\'cc\'b5\'c4runloop\'ca\'c7\'c4\'ac\'c8\'cf\'b4\'f2\'bf\'aa\'b5\'c4\'a3\'ac\'d7\'d3\'cf\'df\'b3\'cc\'b5\'c4runloop\'d0\'e8\'d2\'aa\'d7\'d4\'bc\'ba\'b4\'f2\'bf\'aa\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f2\fs36 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 [[\cf12 NSRunLoop\cf0  \cf4 currentRunLoop\cf0 ] \cf4 addTimer\cf0 :\cf13 timer\cf0  \cf4 forMode\cf0 :\cf3 NSDefaultRunLoopMode\cf0 ];
+\f1\fs28 \cf27 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\partightenfactor0
+
+\f5 \cf24 Run loop 
+\f1 \'d4\'da\'c4\'e3\'d2\'aa\'ba\'cd\'cf\'df\'b3\'cc\'d3\'d0\'b8\'fc\'b6\'e0\'b5\'c4\'bd\'bb\'bb\'a5\'ca\'b1\'b2\'c5\'d0\'e8\'d2\'aa
+\f5 ,
+\f1 \'b1\'c8\'c8\'e7\'d2\'d4\'cf\'c2\'c7\'e9\'bf\'f6
+\f5 :\
+
+\f1 \'ca\'b9\'d3\'c3\'b6\'cb\'bf\'da\'bb\'f2\'d7\'d4\'b6\'a8\'d2\'e5\'ca\'e4\'c8\'eb\'d4\'b4\'c0\'b4\'ba\'cd\'c6\'e4\'cb\'fb\'cf\'df\'b3\'cc\'cd\'a8\'d0\'c5\'a3\'bb
+\f5 \
+
+\f1 \'ca\'b9\'d3\'c3\'cf\'df\'b3\'cc\'b5\'c4\'b6\'a8\'ca\'b1\'c6\'f7\'a3\'bb
+\f5 \
+Cocoa 
+\f1 \'d6\'d0\'ca\'b9\'d3\'c3\'c8\'ce\'ba\'ce
+\f5 performSelector...
+\f1 \'b5\'c4\'b7\'bd\'b7\'a8\'a3\'bb
+\f5 \
+
+\f1 \'ca\'b9\'cf\'df\'b3\'cc\'d6\'dc\'c6\'da\'d0\'d4\'b9\'a4\'d7\'f7\'a1\'a3\
+\'c3\'bb\'d3\'d0runloop\'b5\'c4\'ca\'b1\'ba\'f2\'c8\'e7\'b9\'fb\'d2\'bb\'b8\'f6\'bf\'d8\'bc\'fe\'d4\'da\'cf\'ec\'d3\'a6\'d6\'d0\'a3\'ac\'b1\'f0\'b5\'c4\'bf\'d8\'bc\'fe\'ca\'c7\'cf\'ec\'d3\'a6\'b2\'bb\'c1\'cb\'b5\'c4\'a3\'ac\'cf\'e0\'b5\'b1\'d3\'da\'b1\'f0\'b5\'c4\'bf\'d8\'bc\'fe\'b5\'c4\'cf\'ec\'d3\'a6\'b1\'bb\'d7\'e8\'c8\'fb\'c1\'cb\'a1\'a3\
+\'d3\'d0runloop\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'bf\'c9\'d2\'d4\'cf\'ec\'d3\'a6\'b6\'e0\'b8\'f6\'bf\'d8\'bc\'fe\'b5\'c4\'ca\'c2\'bc\'fe\'a1\'a3\
+runloop\'a3\'ba\'ca\'b9\'b3\'cc\'d0\'f2\'d2\'bb\'d6\'b1\'d4\'cb\'d0\'d0\'b2\'a2\'bd\'d3\'ca\'dc\'d3\'c3\'bb\'a7\'ca\'e4\'c8\'eb\
+	      \'be\'f6\'b6\'a8\'b3\'cc\'d0\'f2\'d4\'da\'ba\'cf\'ca\'ca\'b8\'c3\'b4\'a6\'c0\'ed\'c4\'c4\'d0\'a9Event\
+	      \'b5\'f7\'d3\'c3\'bd\'e2\'f1\'ee\'a3\'a8Message Queue\'a3\'a9\
+              \'bd\'da\'ca\'a1CPU\'ca\'b1\'bc\'e4\
+\pard\pardeftab720\partightenfactor0
+
+\b\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx770\pardeftab770\pardirnatural\partightenfactor0
+
+\f3 \cf0 \
+http://ww3.sinaimg.cn/thumbnail/74c6c047jw1f8pl2gcdilj20fa0b0wfb.jpg\
+http://ww3.sinaimg.cn/bmiddle/74c6c047jw1f8pl2gcdilj20fa0b0wfb.jpg\
+\
+http://www.cocoachina.com/bbs/read.php?tid=292953\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs28 \cf24 \expnd0\expndtw0\kerning0
+\CocoaLigature1 1
+\f1 \'a1\'a2
+\f4  app
+\f1 \'b5\'c4\'b1\'c0\'c0\'a3\'c2\'ca\'ca\'c7\'b6\'e0\'c9\'d9\'a3\'bf\'cf\'df\'c9\'cf
+\f4 app
+\f1 \'b3\'f6\'cf\'d6\'ce\'ca\'cc\'e2\'c8\'e7\'ba\'ce\'bd\'e2\'be\'f6\'a3\'bf
+\f0 \
+
+\f4 1.app
+\f1 \'b5\'c4\'b1\'c0\'c0\'a3\'c2\'ca\'bf\'c9\'d2\'d4\'d6\'b1\'bd\'d3\'b2\'bb\'bb\'d8\'b4\'f0\'c1\'cb\'a3\'ac\'d2\'f2\'ce\'aa\'c3\'bb\'d3\'d0\'b1\'d8\'d2\'aa\'b9\'ab\'bf\'aa\'d5\'e2\'d0\'a9\'ca\'fd\'be\'dd\'a1\'a3\'cf\'df\'c9\'cf\'b5\'c4
+\f4 app
+\f1 \'b3\'f6\'cf\'d6\'c4\'c4\'d0\'a9\'ce\'ca\'cc\'e2\'c4\'d8\'a3\'bf\'b1\'c8\'c8\'e7\'ba\'f3\'cc\'a8\'bd\'d3\'bf\'da\'b3\'f6\'b4\'ed\'c1\'cb\'a3\'ac\'bf\'cd\'bb\'a7\'b6\'cb\'b8\'f9\'b1\'be\'be\'cd\'b2\'bb\'bf\'c9\'c4\'dc\'b3\'f6\'cf\'d6
+\f4 crash
+\f1 \'a3\'ac\'d2\'f2\'ce\'aa\'d7\'f6\'c1\'cb\'ca\'fd\'be\'dd\'b1\'a3\'bb\'a4\'a3\'ac\'c8\'e7\'b9\'fb\'ca\'c7
+\f4 app
+\f1 \'b1\'be\'c9\'ed\'b5\'c4\'c8\'b1\'cf\'dd\'a3\'ac\'d6\'bb\'c4\'dc\'cd\'a8\'b9\'fd
+\f4 App Store
+\f1 \'bf\'ec\'cb\'d9\'c9\'f3\'ba\'cb\'cd\'a8\'b5\'c0\'bd\'f8\'d0\'d0\'bd\'e2\'be\'f6
+\f4 bug
+\f1 \'a3\'a8\'c6\'e4\'ca\'b5
+\f4 App
+\f1 \'d3\'a6\'b8\'c3\'d7\'f6\'bb\'d2\'b6\'c8\'b7\'a2\'b2\'bc\'b5\'c4\'a3\'ac\'b5\'ab\'ca\'c7\'c4\'e3\'d2\'bb\'b8\'f6\'d0\'a1\'b9\'ab\'cb\'be\'a3\'ac\'d3\'d0\'d7\'ca\'bd\'f0\'ba\'cd\'ca\'b1\'bc\'e4\'d7\'f6\'c3\'b4\'a3\'bf\'a3\'a9
+\f4 \
+2
+\f1 \'a1\'a2
+\f4  Runloop
+\f1 \'ca\'c7\'ca\'b2\'c3\'b4\'a3\'bf\'c8\'e7\'ba\'ce\'d3\'c3\'a3\'bf\'d4\'da\'ca\'b2\'c3\'b4\'b3\'a1\'be\'b0\'cf\'c2\'bb\'e1\'d3\'c3\'b5\'bd\'a3\'bf
+\f0 \
+
+\f4 RunLoop
+\f1 \'ca\'c7\'d3\'eb\'cf\'df\'b3\'cc\'bd\'f8\'d0\'d0\'b9\'d8\'c1\'aa\'b5\'c4\'a3\'ac\'bf\'c9\'d2\'d4\'d5\'e2\'d1\'f9\'c0\'ed\'bd\'e2\'a3\'ac\'c3\'bf\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'d6\'d0\'bb\'e1\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f4 RunLoop
+\f1 \'a3\'a8\'b2\'bb\'d2\'bb\'b6\'a8\'c3\'bf\'b8\'f6\'cf\'df\'b3\'cc\'b6\'bc\'d3\'d0
+\f4 RunLoop
+\f1 \'a3\'a9\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'d2\'bb\'b8\'f6
+\f4 task
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f4 RunLoop
+\f1 \'a1\'a3
+\f0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf24 \'d6\'f7\'cf\'df\'b3\'cc\'b5\'c4
+\f4 RunLoop
+\f1 \'c4\'ac\'c8\'cf\'ca\'c7\'b4\'f2\'bf\'aa\'b5\'c4\'a3\'ac\'b1\'f0\'b5\'c4\'cf\'df\'b3\'cc\'d0\'e8\'d2\'aa\'d7\'d4\'bc\'ba\'b4\'b4\'bd\'a8\'b4\'f2\'bf\'aa
+\f4 \
+3
+\f1 \'a1\'a2
+\f4  
+\f1 \'ca\'fd\'be\'dd\'c1\'d0\'b1\'ed\'d0\'e8\'d2\'aa\'d5\'b9\'ca\'be\'b4\'f3\'c1\'bf\'ca\'fd\'be\'dd\'a3\'ac\'c8\'e7\'ba\'ce\'d3\'c5\'bb\'af\'a3\'bf\'d6\'c1\'c9\'d9\'c8\'fd\'b8\'f6\'b7\'bd\'c3\'e6\'a3\'bf
+\f0 \
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf24 datasouce
+\f1 \'ca\'fd\'d7\'e9\'b1\'d8\'d0\'eb\'d7\'f6\'b3\'c9\'bb\'ba\'b3\'e5\'c7\'f8\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'c8\'eb\'b6\'d3\'b3\'f6\'b6\'d3\'b2\'d9\'d7\'f7\'a1\'a3
+\f4 datasouce
+\f1 \'d7\'ee\'b6\'e0\'bc\'d3\'d4\'d8\'ce\'d2\'d5\'e2\'c0\'ef\'d7\'d4\'bc\'ba\'b6\'a8\'d2\'e5\'b5\'c4\'a3\'ac
+\f4 200
+\f1 \'cc\'f5\'a1\'a3\'cf\'c2\'c0\'ad\'bc\'d3\'d4\'d8\'b8\'fc\'b6\'e0\'a3\'ac\'b5\'b1\'d2\'d1\'be\'ad\'bc\'d3\'d4\'d8\'b5\'bd
+\f4 200
+\f1 \'cc\'f5\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'d5\'e2\'b8\'f6\'ca\'b1\'ba\'f2\'be\'cd\'d0\'e8\'d2\'aa\'bb\'ba\'b3\'e5\'c1\'cb\'a3\'ac\'c8\'eb\'b6\'d3\'b3\'f6\'b6\'d3\'b2\'d9\'d7\'f7\'a1\'a3
+\f0 \
+
+\f4 3.
+\f1 \'b5\'da\'d2\'bb\'cf\'c8\'c0\'fb\'d3\'c3
+\f4 TableVIew
+\f1 \'bb\'f2\'d5\'df
+\f4 CollectionView
+\f1 \'b5\'c4\'d6\'d8\'d3\'c3\'bb\'fa\'d6\'c6\'a3\'bb\'b5\'da\'b6\'fe\'d4\'d9\'b6\'a8\'d6\'c6\'b8\'f7\'d6\'d6\'d1\'f9\'ca\'bd\'b5\'c4
+\f4 Cell 
+\f1 \'a3\'bb\'d6\'d8\'b5\'e3\'b5\'da\'c8\'fd\'cd\'a8\'b9\'fd
+\f4 CoreText
+\f1 \'bb\'f2\'d5\'df
+\f4 TextKit
+\f1 \'c0\'b4\'d7\'f6\'b8\'bb\'ce\'c4\'b1\'be\'b5\'c4\'d5\'b9\'ca\'be\'a3\'ac\'be\'a1\'c1\'bf\'bc\'f5\'c9\'d9
+\f4 UI
+\f1 \'bf\'d8\'bc\'fe\'b5\'c4\'bb\'e6\'d6\'c6\'b9\'a4\'d7\'f7
+\f4 \'a0\'a0 
+\f1 \'d4\'d9\'c9\'ee\'c8\'eb\'d2\'bb\'b5\'e3\'a3\'ba\'cd\'a8\'b9\'fd\'bf\'d5\'bc\'e4\'bb\'bb\'c8\'a1\'ca\'b1\'bc\'e4\'a3\'ac\'c0\'fb\'d3\'c3\'bb\'ba\'b4\'e6\'b7\'bd\'ca\'bd\'bd\'f8\'d0\'d0\'bb\'ba\'b4\'e6
+\f4 Cell
+\f1 \'b5\'c4\'b8\'df\'b6\'c8\'a3\'ac\'b4\'d3\'b6\'f8\'bc\'f5\'c9\'d9\'bc\'c6\'cb\'e3\'b5\'c4\'ca\'b1\'bc\'e4
+\f4 \
+4
+\f1 \'a1\'a2
+\f4  SQLite
+\f1 \'ba\'cd
+\f4 CoreData
+\f1 \'c7\'f8\'b1\'f0\'a3\'bf\'d3\'c5\'c8\'b1\'b5\'e3\'a3\'bf
+\f4 FBDataBase
+\f1 \'ca\'b9\'d3\'c3\'a3\'bf
+\f4 coreData
+\f1 \'bd\'e1\'b9\'b9\'b9\'b9\'b3\'c9\'a3\'bf
+\f0 \
+
+\f4 4SQLite
+\f1 \'ba\'cd
+\f4 CoreData
+\f1 \'c3\'bb\'d3\'d0\'b1\'be\'d6\'ca\'c9\'cf\'b5\'c4\'c7\'f8\'b1\'f0\'a3\'ac
+\f4 CoreData
+\f1 \'ca\'c7\'b6\'d4\'d4\'ad\'ca\'bc
+\f4 SQLite
+\f1 \'ca\'fd\'be\'dd\'bf\'e2
+\f4 API
+\f1 \'b7\'c3\'ce\'ca\'bd\'f8\'d0\'d0\'c1\'cb\'d2\'bb\'b2\'e3\'b7\'e2\'d7\'b0\'a3\'ac\'cd\'a8\'b9\'fd\'c3\'e6\'cf\'f2\'b6\'d4\'cf\'f3\'b5\'c4\'bd\'d3\'bf\'da\'bd\'f8\'d0\'d0\'b9\'dc\'c0\'ed\'ca\'fd\'be\'dd\'bb\'ba\'b4\'e6\'a3\'ac\'b1\'c8\'ca\'b9\'d3\'c3
+\f4 SQL
+\f1 \'d3\'ef\'be\'e4\'b2\'d9\'d7\'f7
+\f4 SQLIte
+\f1 \'ca\'fd\'be\'dd\'bf\'e2\'b8\'fc\'bc\'d3\'bc\'f2\'b5\'a5\'ba\'cd\'b7\'bd\'b1\'e3\'a3\'ac\'b5\'b1\'c8\'bb
+\f4 CoreData
+\f1 \'d2\'b2\'d3\'d0\'c8\'b1\'b5\'e3\'a3\'ac\'b1\'c8\'c8\'e7
+\f4 API
+\f1 \'b2\'bb\'b9\'bb\'d3\'c3\'a3\'ac\'b4\'a6\'c0\'ed\'b4\'f3\'c1\'bf\'ca\'fd\'be\'dd\'bb\'e1\'b1\'e4\'b5\'c3\'bb\'ba\'c2\'fd\'a3\'ac
+\f4 SQLite
+\f1 \'be\'cd\'c3\'bb\'d3\'d0\'d5\'e2\'d1\'f9\'b5\'c4\'ce\'ca\'cc\'e2\'a3\'ac\'d6\'bb\'d2\'aa\'d0\'b4
+\f4 SQL
+\f1 \'d3\'ef\'be\'e4\'b5\'c4\'c8\'cb\'d3\'d0\'be\'ad\'d1\'e9\'a3\'ac\'b4\'f3\'b2\'bf\'b7\'d6\'ca\'c7\'bf\'c9\'d2\'d4\'b1\'dc\'c3\'e2\'b5\'c4\'a3\'ac\'b5\'b1\'c8\'bb
+\f4 SQLIte
+\f1 \'d2\'b2\'bb\'e1\'d3\'d0\'d2\'bb\'d0\'a9\'b1\'d7\'b6\'cb\'a3\'ac\'b1\'c8\'c8\'e7\'cd\'f8\'c2\'e7\'ca\'fd\'be\'dd\'d4\'f5\'d1\'f9\'d7\'d4\'b6\'af\'bb\'af\'d3\'b3\'c9\'e4\'b5\'bd\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'a3\'bf\'b6\'f8
+\f4 CoreData
+\f1 \'be\'cd\'d3\'d0\'c0\'e0\'cb\'c6\'d3\'c9
+\f4 Github
+\f1 \'d0\'b4\'b5\'c4
+\f4 Mantle
+\f1 \'bf\'aa\'d4\'b4\'bf\'e2\'a3\'ac\'ba\'dc\'ba\'c3\'b5\'c4\'b4\'a6\'c0\'ed\'d5\'e2\'b8\'f6\'ce\'ca\'cc\'e2\'a1\'a3
+\f4 CoreData
+\f1 \'cc\'e1\'b9\'a9\'d2\'bb\'b8\'f6\'b9\'dc\'c0\'ed\'c9\'cf\'cf\'c2\'ce\'c4\'a3\'ac\'ca\'fd\'be\'dd\'c4\'a3\'d0\'cd\'a3\'ac\'ca\'fd\'be\'dd\'b3\'d6\'be\'c3\'bb\'af\'b4\'e6\'b4\'a2\'d6\'fa\'c0\'ed\'d0\'ad\'b5\'f7\'c6\'f7\'a1\'a3
+\f4 \
+5
+\f1 \'a1\'a2
+\f4  
+\f1 \'c9\'cf\'c7\'a7\'cc\'f5\'ca\'fd\'be\'dd\'d0\'e8\'d2\'aa\'b2\'e5\'c8\'eb\'ca\'fd\'be\'dd\'b1\'ed\'a3\'ac\'c8\'e7\'ba\'ce\'d3\'c5\'bb\'af\'cc\'e1\'b8\'df\'d0\'a7\'c2\'ca\'a3\'bf
+\f0 \
+
+\f4 5.
+\f1 \'ca\'ca\'b5\'b1\'b5\'c4\'ca\'b9\'d3\'c3\'cb\'f7\'d2\'fd\'a3\'ac\'d2\'f2\'ce\'aa\'b9\'fd\'b7\'d6\'ca\'b9\'d3\'c3\'cb\'f7\'d2\'fd\'bb\'e1\'d2\'fd\'c6\'f0\'b5\'cd\'d0\'a7\'c2\'ca\'b5\'c4\'c7\'e9\'bf\'f6\'a3\'ac\'b0\'d1\'ca\'fd\'be\'dd\'bf\'e2\'bd\'f8\'d0\'d0\'b7\'d6\'c7\'f8\'b4\'e6\'b4\'a2\'a3\'ac\'bb\'f2\'d5\'df\'b0\'d1\'ca\'fd\'be\'dd\'bd\'f8\'d0\'d0\'b7\'d6\'c5\'fa\'b2\'e5\'c8\'eb\'a3\'ac\'c3\'bf\'d2\'bb\'c5\'fa\'b2\'e5\'c8\'eb\'d3\'d0\'d2\'bb\'b8\'f6\'cd\'a8\'d6\'aa\'bb\'d8\'b5\'f7
+\f4 \
+6
+\f1 \'a1\'a2
+\f4  
+\f1 \'cd\'ac\'ca\'b1\'b6\'d4\'cd\'ac\'d2\'bb\'d5\'c5\'b1\'ed\'bd\'f8\'d0\'d0\'b2\'d9\'d7\'f7\'a3\'bf
+\f0 \
+
+\f4 6.
+\f1 \'d5\'e2\'b8\'f6\'ce\'ca\'cc\'e2\'ba\'c3\'c7\'a3\'c7\'bf\'a3\'ac\'b6\'d4\'cd\'ac\'d2\'bb\'b8\'f6\'b1\'ed\'b2\'d9\'d7\'f7\'a3\'bf\'d3\'a6\'b8\'c3\'ca\'c7\'cf\'eb\'ce\'ca\'cd\'ac\'ca\'c2\'b2\'d9\'d7\'f7\'ca\'fd\'be\'dd\'bf\'e2\'b0\'c9\'a3\'bf\'c8\'e7\'b9\'fb\'d4\'da\'cf\'df\'b3\'cc\'cb\'f6\'c9\'cf\'b5\'c4\'ce\'ca\'cc\'e2\'a3\'ac\'bf\'c9\'d2\'d4\'c0\'fb\'d3\'c3\'d4\'ad\'d7\'d3\'b7\'c3\'ce\'ca\'a1\'a2\'bb\'a5\'b3\'e2\'b5\'c8\'b7\'bd\'ca\'bd\'bd\'f8\'d0\'d0\'b1\'dc\'c3\'e2\'d7\'ca\'d4\'b4\'be\'ba\'d5\'f9\'b5\'c4\'ce\'ca\'cc\'e2   \'ca\'b9\'d3\'c3\'cb\'f8\'a1\'a2\'b4\'ae\'d0\'d0\'b5\'f7\'b6\'c8\'b6\'d3\'c1\'d0\'b5\'c8\'b6\'bc\'bf\'c9\'d2\'d4\'a3\'ac\'b2\'ce\'bf\'bc
+\f4 FMDB
+\f1 \'d6\'d0\'b5\'c4
+\f4 FMDtabaseQueue
+\f1 \'a1\'a3
+\f4 \
+7
+\f1 \'a1\'a2
+\f4  
+\f1 \'ca\'fd\'be\'dd\'bf\'e2\'ca\'b2\'c3\'b4\'ca\'b1\'ba\'f2\'b4\'f2\'bf\'aa\'a3\'bf\'ca\'b2\'c3\'b4\'ca\'b1\'ba\'f2\'b9\'d8\'b1\'d5\'a3\'bf
+\f0 \
+
+\f4 7
+\f1 \'a1\'a2\'ca\'fd\'be\'dd\'bf\'e2\'d4\'da\'ca\'b9\'d3\'c3\'ca\'b1\'b4\'f2\'bf\'aa\'a3\'ac\'ca\'b9\'d3\'c3\'cd\'ea\'c1\'a2\'bc\'b4\'b9\'d8\'b1\'d5\'d2\'d4\'bd\'da\'ca\'a1\'d7\'ca\'d4\'b4\'a1\'a3\'b5\'ab\'ca\'c7\'d4\'da\'d2\'bb\'d0\'a9\'cc\'d8\'ca\'e2\'c7\'e9\'bf\'f6\'cf\'c2\'a3\'ac\'bf\'c9\'d2\'d4\'b1\'a3\'b3\'d6\'bd\'cf\'b3\'a4\'ca\'b1\'bc\'e4\'b5\'c4\'b4\'f2\'bf\'aa\'a3\'ac\'d2\'d4\'cc\'e1\'c9\'fd\'d0\'a7\'c2\'ca\'a3\'ac\'c0\'fd\'c8\'e7\'d4\'da\'c4\'b3\'b8\'f6\'ca\'b1\'bc\'e4\'b6\'ce\'a3\'ac\'bb\'e1\'c6\'b5\'b7\'b1\'b5\'c4\'d0\'b4\'c8\'eb\'ca\'fd\'be\'dd\'a1\'a3\'be\'df\'cc\'e5\'bb\'b9\'ca\'c7\'d2\'aa\'bf\'b4\'d2\'b5\'ce\'f1\'a1\'a3
+\f4 \
+8
+\f1 \'a1\'a2
+\f4  WebView
+\f1 \'cd\'bb\'c8\'bb\'b5\'af\'b3\'f6\'b9\'e3\'b8\'e6\'bb\'f2\'d5\'df\'c0\'ac\'bb\'f8\'d0\'c5\'cf\'a2\'a3\'bf\'ca\'c7\'ca\'b2\'c3\'b4\'d4\'ad\'d2\'f2\'d4\'ec\'b3\'c9\'b5\'c4\'a3\'bf\'c8\'e7\'ba\'ce\'bd\'e2\'be\'f6\'a3\'bf
+\f0 \
+
+\f4 8.WebView
+\f1 \'cd\'bb\'c8\'bb\'b5\'af\'b3\'f6\'b9\'e3\'b8\'e6\'a3\'bf\'c4\'c7\'bf\'cf\'b6\'a8\'ca\'c7
+\f4 H
+\f1 \'b5\'c4\'b4\'ed\'c0\'b2\'a3\'a1\'b5\'b1\'c8\'bb\'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'bd\'f8\'d0\'d0\'b1\'dc\'c3\'e2\'a3\'ac\'cd\'a8\'b9\'fd
+\f4 WebView
+\f1 \'b5\'c4
+\f4 delegate
+\f1 \'bd\'f8\'d0\'d0
+\f4 URL
+\f1 \'bd\'d8\'c8\'a1\'a3\'ac\'c8\'bb\'ba\'f3\'c4\'c3\'b9\'d8\'bc\'fc\'b4\'ca\'d3\'eb\'b3\'a3\'b3\'f6\'cf\'d6\'b5\'c4\'b9\'e3\'b8\'e6\'d7\'a2\'c8\'eb\'b1\'ea\'ca\'b6\'bf\'e2\'bd\'f8\'d0\'d0\'c6\'a5\'c5\'e4\'a3\'ac\'b4\'d3\'b6\'f8\'b4\'ef\'b5\'bd\'c0\'b9\'bd\'d8\'b5\'c4\'d7\'f7\'d3\'c3
+\f4 \
+9
+\f1 \'a1\'a2
+\f4  ASI
+\f1 \'ba\'cd
+\f4 AFNetWorking
+\f1 \'c7\'f8\'b1\'f0\'a3\'bf\'ba\'cb\'d0\'c4\'ca\'b5\'cf\'d6\'c9\'cf\'d3\'d0\'ca\'b2\'c3\'b4\'b2\'bb\'cd\'ac\'a3\'bf
+\f0 \
+
+\f4 9.ASI
+\f1 \'ca\'c7\'bb\'f9\'d3\'da\'b5\'d7\'b2\'e3
+\f4 CSNetworking
+\f1 \'bf\'f2\'bc\'dc\'bd\'f8\'d0\'d0\'bf\'aa\'b7\'a2\'a3\'ac\'d7\'a2\'d6\'d8\'d3\'da\'cd\'f8\'c2\'e7\'ca\'fd\'be\'dd\'b5\'c4\'bb\'ba\'b4\'e6\'a3\'ac
+\f4 ASI
+\f1 \'cc\'ab\'d6\'d8\'a3\'ac\'d2\'d1\'be\'ad\'ce\'de\'c8\'cb\'ce\'ac\'bb\'a4\'a1\'a3
+\f4 AFNetworking
+\f1 \'ca\'c7\'bb\'f9\'d3\'da
+\f4 NSURLConnection
+\f1 \'bf\'f2\'bc\'dc\'bd\'f8\'d0\'d0\'bf\'aa\'b7\'a2\'b5\'c4\'a3\'ac\'d7\'a2\'d6\'d8\'d3\'da\'cd\'f8\'c2\'e7\'ca\'fd\'be\'dd\'b5\'c4\'b4\'a6\'c0\'ed\'a3\'ac\'bf\'ec\'cb\'d9\'c7\'eb\'c7\'f3\'b5\'c4\'b9\'fd\'b3\'cc\'a3\'ac\'ca\'b9\'d3\'c3\'ba\'dc\'b7\'bd\'b1\'e3\'a1\'a3\'ba\'cb\'d0\'c4\'bc\'bc\'ca\'f5\'d2\'d1\'be\'ad\'d4\'da\'c9\'cf\'c3\'e6\'b1\'ed\'b4\'ef\'c1\'cb
+\f4 \
+10
+\f1 \'a1\'a2
+\f4  
+\f1 \'cf\'ee\'c4\'bf\'d6\'d0\'d3\'f6\'b5\'bd\'b9\'fd\'ca\'b2\'c3\'b4\'d6\'d8\'b4\'f3\'ce\'ca\'cc\'e2\'a3\'bf\'c8\'e7\'ba\'ce\'bd\'e2\'be\'f6\'b5\'c4\'a3\'bf
+\f0 \
+
+\f4 10.
+\f1 \'cf\'ee\'c4\'bf\'d6\'d0\'d3\'f6\'b5\'bd\'b5\'c4\'d6\'d8\'b4\'f3\'ce\'ca\'cc\'e2\'a3\'bf\'ba\'c3\'b0\'c9\'a3\'a1\'d2\'bb\'b0\'e3\'b5\'c4
+\f4 App
+\f1 \'b6\'bc\'b2\'bb\'bb\'e1\'b3\'f6\'cf\'d6\'a3\'ac\'ce\'de\'b7\'c7\'be\'cd\'ca\'c7\'b6\'e0\'cf\'df\'b3\'cc\'a1\'a2\'ca\'fd\'be\'dd\'bf\'e2\'b2\'d9\'d7\'f7\'a1\'a2\'ca\'d3\'c6\'b5\'d2\'f4\'c6\'b5\'b8\'f1\'ca\'bd\'b4\'a6\'c0\'ed\'b5\'c8\'b5\'c8\'a3\'a1\'d6\'bb\'d2\'aa\'cd\'a8\'b9\'fd
+\f4 SO
+\f1 \'bd\'f8\'d0\'d0\'b2\'e9\'d4\'c4\'a3\'ac\'d2\'bb\'b0\'e3\'b6\'bc\'bf\'c9\'d2\'d4\'bd\'e2\'be\'f6\'b5\'f4\'d2\'bb\'b0\'eb\'b5\'c4\'ce\'ca\'cc\'e2\'a3\'ac\'ca\'b5\'d4\'da\'b2\'bb\'d0\'d0\'a3\'ac\'c4\'c7\'be\'cd\'d0\'e8\'d2\'aa\'cd\'ac\'ca\'c2\'b5\'c4\'d6\'a7\'b3\'d6\'a3\'ac\'c8\'bb\'ba\'f3\'b9\'b2\'cd\'ac\'bd\'e2\'be\'f6\'a3\'ac\'c8\'e7\'b9\'fb\'d2\'bb\'b6\'a8\'d2\'aa\'c3\'e8\'ca\'f6\'bd\'e2\'be\'f6\'b7\'bd\'b0\'b8\'b5\'c4\'bb\'b0\'a3\'ac\'cb\'b5\'c3\'f7\'cb\'fb\'cf\'eb\'d5\'d0\'c4\'e3\'d7\'f6\'d6\'f7\'b9\'dc\'bb\'f2\'d5\'df\'bf\'aa\'b7\'a2\'be\'ad\'c0\'ed
+\f4 \
+11
+\f1 \'a1\'a2
+\f4  
+\f1 \'d4\'da\'d7\'f6\'cf\'ee\'c4\'bf\'d6\'d0\'ca\'b9\'d3\'c3\'b9\'fd\'c4\'c4\'d0\'a9\'d7\'d4\'bc\'ba\'c8\'cf\'ce\'aa\'b1\'c8\'bd\'cf\'ba\'c3\'b5\'c4\'bc\'bc\'ca\'f5\'a3\'bf
+\f0 \
+
+\f4 11.
+\f1 \'bc\'bc\'ca\'f5\'c3\'bb\'d3\'d0\'ba\'c3\'b2\'bb\'ba\'c3\'a3\'ac\'b1\'c8\'c8\'e7\'ce\'aa\'c1\'cb\'d2\'bb\'b8\'f6
+\f4 RSS App
+\f1 \'a3\'ac\'c4\'e3\'d3\'c3\'d2\'bb\'b8\'f6
+\f4 VIPER
+\f1 \'c4\'a3\'ca\'bd\'a3\'ac\'c8\'bb\'ba\'f3\'b8\'e3\'b8\'f6\'d7\'b4\'cc\'ac\'bb\'fa\'a3\'ac\'ba\'c3\'b8\'df\'bc\'b6\'b5\'c4\'d1\'f9\'d7\'d3\'a3\'ac\'b5\'ab\'ca\'c7\'c3\'bb\'d3\'d0\'b1\'d8\'d2\'aa\'a3\'ac\'b6\'d4\'d3\'da\'d2\'b5\'ce\'f1\'b1\'e4\'b6\'af\'d3\'d0\'d2\'bb\'b8\'f6\'b1\'c8\'bd\'cf\'ba\'c3\'b5\'c4\'c9\'e8\'bc\'c6\'c4\'a3\'ca\'bd\'be\'cd\'ba\'c3\'c1\'cb
+\f4 \
+12
+\f1 \'a1\'a2
+\f4  
+\f0 app
+\f1 \'b0\'e6\'b1\'be\'c9\'fd\'bc\'b6\'d6\'d0\'d0\'e8\'d2\'aa\'b6\'d4\'ca\'fd\'be\'dd\'b1\'ed\'b5\'c8\'d7\'f6\'b8\'fc\'d0\'c2\'a3\'ac\'b4\'cb\'ca\'b1\'c8\'e7\'ba\'ce\'ca\'fd\'be\'dd\'bf\'e2\'c9\'fd\'bc\'b6\'a3\'bf
+\f0 \
+
+\f4 12.app
+\f1 \'c9\'fd\'bc\'b6\'d0\'e8\'d2\'aa\'b0\'d1\'ca\'fd\'be\'dd\'bf\'e2\'b5\'c4\'ca\'fd\'be\'dd\'bd\'f8\'d0\'d0\'c7\'a8\'d2\'c6\'a3\'ac\'ca\'fd\'be\'dd\'ba\'cf\'b2\'a2\'a3\'a8\'be\'df\'cc\'e5\'bb\'b9\'b5\'c3\'bf\'b4\'cf\'ee\'c4\'bf\'b5\'c4\'c7\'e9\'bf\'f6\'c5\'b6\'a3\'a1\'a3\'a9
+\f4 \
+13
+\f1 \'a1\'a2
+\f4  
+\f0 category
+\f1 \'c0\'e0\'c4\'bf\'b5\'c4\'d7\'f7\'d3\'c3\'a3\'bf\'c0\'e0\'c4\'bf\'ca\'c7\'b7\'f1\'bf\'c9\'d2\'d4\'cc\'ed\'bc\'d3\'ca\'f4\'d0\'d4\'a3\'bf\'c0\'e0\'c4\'bf\'d6\'d0\'b5\'c3\'b7\'bd\'b7\'a8\'c3\'fb\'ba\'cd\'cf\'b5\'cd\'b3\'b5\'c4\'d6\'d8\'c3\'fb\'bb\'e1\'d4\'f5\'d1\'f9\'a3\'bf
+\f0 \
+
+\f4 13.category
+\f1 \'b5\'c4\'d7\'f7\'d3\'c3\'ca\'c7\'b8\'f8\'bf\'aa\'b7\'a2\'d5\'df\'cc\'e1\'b9\'a9\'d2\'bb\'b8\'f6\'b2\'bb\'d0\'e8\'d2\'aa\'d0\'de\'b8\'c4\'d4\'b4\'b4\'fa\'c2\'eb\'be\'cd\'bf\'c9\'d2\'d4\'cc\'ed\'bc\'d3\'b7\'bd\'b7\'a8\'a3\'ac
+\f4 category
+\f1 \'bf\'c9\'d2\'d4\'cc\'ed\'bc\'d3\'ca\'f4\'d0\'d4\'a3\'ac\'c6\'e4\'ca\'b5\'d5\'e2\'c0\'ef\'b5\'c4\'d4\'ad\'c0\'ed\'ca\'c7\'cd\'a8\'b9\'fd
+\f4 Runtime
+\f1 \'b5\'c4\'b7\'bd\'ca\'bd\'bd\'f8\'d0\'d0\'b0\'f3\'b6\'a8\'c4\'b3\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac\'c8\'e7\'b9\'fb
+\f4 category
+\f1 \'b5\'c4\'b7\'bd\'b7\'a8\'c3\'fb\'ba\'cd\'cf\'b5\'cd\'b3\'d6\'d8\'c3\'fb\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'d6\'b1\'bd\'d3\'d6\'d8\'d4\'d8\'c1\'cb\'cf\'b5\'cd\'b3\'b5\'c4\'b7\'bd\'b7\'a8
+\f4 \
+14
+\f1 \'a1\'a2
+\f4  
+\f1 \'b7\'e2\'d7\'b0\'c0\'e0\'bf\'e2\'b8\'f8\'b1\'f0\'c8\'cb\'d3\'c3\'a3\'ac\'d0\'e8\'d2\'aa\'d7\'a2\'d2\'e2\'c4\'c4\'d0\'a9\'ce\'ca\'cc\'e2\'a3\'bf
+\f0 \
+
+\f4 14.
+\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'b7\'e2\'d7\'b0
+\f4 UI
+\f1 \'d7\'e9\'bc\'fe\'a3\'ac\'ce\'d2\'bb\'e1\'bf\'bc\'c2\'c7\'b8\'df\'c4\'da\'be\'db\'a3\'ac\'b5\'cd\'f1\'ee\'ba\'cf\'b5\'c4\'b7\'bd\'ca\'bd\'a3\'ac\'cc\'e1\'b9\'a9\'bc\'f2\'b5\'a5\'d3\'d6\'b7\'e1\'b8\'bb\'b5\'c4
+\f4 API
+\f1 \'a3\'ac\'b1\'c8\'c8\'e7\'b9\'a4\'b3\'a7\'b5\'c4\'b4\'b4\'bd\'a8\'b7\'bd\'b7\'a8
+\f4 \
+15
+\f1 \'a1\'a2
+\f4  
+\f1 \'b6\'e0\'cf\'df\'b3\'cc\'c0\'ef\'c3\'e6\'d6\'f7\'d2\'aa\'d3\'c9\'c4\'c4\'bc\'b8\'d6\'d6\'a3\'bf\'cb\'fc\'c3\'c7\'b5\'c4\'d3\'c5\'c8\'b1\'b5\'e3\'a3\'bf
+\f0 \
+
+\f4 15.
+\f1 \'b6\'e0\'cf\'df\'b3\'cc\'a3\'ba
+\f4 NSOperation
+\f1 \'c5\'e4\'ba\'cf
+\f4 NSOperationQueue
+\f1 \'a3\'ac
+\f4 GCD
+\f1 \'a3\'ac
+\f4 NSThread
+\f1 \'a3\'bb
+\f4 GCD
+\f1 \'b5\'c4\'c8\'b1\'b5\'e3\'c4\'d1\'d3\'da\'b9\'dc\'c0\'ed\'a3\'ac\'b2\'bb\'bf\'c9\'c8\'a1\'cf\'fb\'ba\'cd\'d4\'dd\'b6\'a8\'a3\'ac
+\f4 NSTr
+\f1 \'c4\'d1\'d3\'da\'b6\'a8\'ce\'bb\'ce\'ca\'cc\'e2\'a3\'ac
+\f4 NSOperation
+\f1 \'bf\'c9\'d3\'c3\'d0\'d4\'b8\'df\'a3\'ac\'bf\'c9\'d6\'a7\'b3\'d6\'b5\'f7\'b6\'c8\'a1\'a2\'d4\'dd\'cd\'a3\'a3\'ac\'c8\'a1\'cf\'fb\'b5\'c8\'b9\'a6\'c4\'dc\'a3\'ac\'d2\'bb\'b0\'e3\'b6\'bc\'bb\'e1\'b2\'c5\'c8\'a5\'bc\'cc\'b3\'d0
+\f4 NSOperation
+\f1 \'c0\'b4\'d7\'f6\'b8\'fc\'c9\'ee\'c8\'eb\'b5\'c4\'b6\'a8\'d6\'c6\'cf\'df\'b3\'cc
+\f4 \
+16
+\f1 \'a1\'a2
+\f4  
+\f1 \'ca\'b5\'cf\'d6\'c0\'e0\'cb\'c6\'cd\'f8\'d2\'d7\'d0\'c2\'ce\'c5\'b5\'c4\'bb\'ac\'b6\'af\'b1\'ea\'c7\'a9\'d1\'a1\'cf\'ee\'a3\'ac\'d0\'e8\'d2\'aa\'d0\'b4\'c4\'c4\'bc\'b8\'b8\'f6\'c0\'e0\'a3\'bf
+\f0 \
+
+\f4 16.
+\f1 \'ca\'c7\'d5\'e2\'b8\'f6\'c3\'e6\'ca\'d4\'b9\'d9\'d3\'d0\'b5\'e3\'d2\'b5\'d3\'e0\'a3\'bf\'bb\'b9\'ca\'c7\'d7\'f7\'d5\'df\'c3\'bb\'bc\'c7\'c7\'e5\'b3\'fe\'c4\'d8\'a3\'bf\'cd\'f8\'d2\'d7\'d0\'c2\'ce\'c5\'b5\'c4\'b9\'f6\'b6\'af\'b1\'ea\'c7\'a9\'ba\'cd\'c8\'dd\'c6\'f7\'b6\'bc\'ca\'c7\'d2\'bb\'b8\'f6\'c1\'aa\'b6\'af\'b5\'c4
+\f4 ScrollView
+\f1 \'a3\'ac\'cd\'a8\'b9\'fd\'cd\'b3\'d2\'bb\'b9\'dc\'c0\'ed\'ca\'fd\'be\'dd\'d4\'b4\'a3\'ac\'c0\'fb\'d3\'c3
+\f4 KVO
+\f1 \'d7\'f6\'c1\'bd\'b8\'f6
+\f4 ScrollView
+\f1 \'b5\'c4\'c1\'aa\'b6\'af\'b9\'a4\'d7\'f7
+\f4 \
+17
+\f1 \'a1\'a2
+\f4  
+\f1 \'b1\'c8\'c8\'e7\'d2\'bb\'b8\'f6\'b5\'da\'c8\'fd\'b7\'bd\'b7\'d6\'cf\'ed\'a3\'ac\'c3\'bf\'b4\'ce\'b5\'f7\'d3\'c3\'b6\'bc\'b1\'c8\'bd\'cf\'ba\'c4\'ca\'b1\'a3\'ac\'b6\'f8\'c7\'d2\'ba\'c3\'b6\'e0\'d2\'b3\'c3\'e6\'b6\'bc\'d3\'c3\'b5\'bd\'c1\'cb\'a3\'ac\'c4\'c7\'c8\'e7\'ba\'ce\'bc\'e0\'bf\'d8\'b4\'ce\'ba\'c4\'ca\'b1\'b2\'d9\'d7\'f7\'d4\'da\'cb\'f9\'d3\'d0\'d2\'b3\'c3\'e6\'b5\'c4\'ba\'c4\'ca\'b1\'ca\'b1\'bc\'e4\'a3\'bf
+\f4 \
+18
+\f1 \'a1\'a2
+\f4  [__NSString close] unrecogonized selector \
+\
+[__NSDictionary close]\'a0 unrecoginized selector 
+\f1 \'ce\'aa\'ca\'b2\'c3\'b4\'b3\'f6\'cf\'d6\'d5\'e2\'d6\'d6\'ce\'ca\'cc\'e2\'a3\'bf\'d3\'c9\'ca\'b2\'c3\'b4\'d4\'ec\'b3\'c9\'b5\'c4\'a3\'bf
+\f0 \cb28 (
+\f1 \'ce\'ca\'cc\'e2\'b2\'ee\'b2\'bb\'b6\'e0\'ca\'c7\'d5\'e2\'d1\'f9\'b5\'c4\'a3\'ac\'be\'df\'cc\'e5\'c3\'bb\'bc\'c7\'c7\'e5\'b3\'fe
+\f0 )\
+
+\f4 \cb1 18.
+\f1 \'d5\'e2\'c0\'ef\'bf\'c9\'c4\'dc\'ca\'c7\'b6\'af\'cc\'ac\'c0\'e0\'d0\'cd\'b5\'c4\'bf\'bc\'b5\'e3\'b0\'c9\'a3\'a1
+\f4  
+\f1 \'c8\'e7\'b9\'fb\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'b2\'bb\'c3\'f7\'c8\'b7\'ca\'c7\'ca\'b2\'c3\'b4\'c0\'e0\'d0\'cd\'a3\'ac\'c8\'b4\'d3\'c3\'c1\'cb\'c4\'b3\'d2\'bb\'d6\'d6\'c0\'e0\'d0\'cd\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'b5\'bc\'d6\'c2\'c1\'cb
+\f4 crash
+\f1 \'a3\'ac\'d5\'e2\'c0\'ef\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd\'c1\'bd\'d6\'d6\'b7\'bd\'b7\'a8\'c0\'b4\'b7\'c0\'d6\'b9\'a3\'ac\'b5\'da\'d2\'bb\'bc\'f2\'b5\'a5\'b5\'c4\'ca\'b9\'d3\'c3
+\f4 respondsToSelector
+\f1 \'c0\'b4\'bc\'ec\'b2\'e9\'a3\'ac\'b5\'da\'b6\'fe\'be\'cd\'ca\'c7\'c9\'d9\'d3\'c3\'b6\'af\'cc\'ac\'c0\'e0\'d0\'cd\'b5\'c4\'b6\'d4\'cf\'f3\'a3\'ac\'be\'a1\'c1\'bf\'ca\'b9\'d3\'c3\'c7\'bf\'d6\'c6\'b5\'c4\'c0\'e0\'d0\'cd
+\f4 \
+19
+\f1 \'a1\'a2
+\f4  
+\f1 \'c6\'bd\'ca\'b1\'bf\'b4\'d0\'a9\'ca\'b2\'c3\'b4\'ca\'e9\'bc\'ae\'a3\'bf
+\f0 \
+
+\f4 19.
+\f1 \'c6\'bd\'ca\'b1\'bf\'b4\'b2\'fa\'c6\'b7\'a1\'a2\'c9\'e8\'bc\'c6\'cf\'e0\'b9\'d8\'b5\'c4\'ca\'e9\'a3\'ac\'b1\'c8\'bd\'cf\'b6\'e0\'b5\'c4\'bb\'b9\'ca\'c7\'d4\'da\'c2\'db\'cc\'b3\'a3\'ac\'b1\'c8\'c8\'e7
+\f4 SO
+\f1 \'a1\'a2\'b9\'d9\'b7\'bd\'b5\'c4
+\f4 Develpor
+\f1 \'a1\'a2
+\f4 github
+\f1 \'b5\'c8\'b5\'c8
+\f4 ({\field{\*\fldinst{HYPERLINK "https://github.com/xhzengAIB"}}{\fldrslt \cf29 https://github.com/xhzengAIB}})\
+20
+\f1 \'a1\'a2
+\f4  
+\f1 \'d7\'d4\'bc\'ba\'b5\'c3\'d3\'c5\'c8\'b1\'b5\'e3\'a3\'bf
+\f4 \
+21
+\f1 \'a1\'a2
+\f4  
+\f1 \'b3\'a3\'bc\'fb\'b5\'c3\'d7\'d6\'b7\'fb\'b1\'e0\'c2\'eb\'a3\'bf\'cb\'fc\'c3\'c7\'b5\'c4\'c7\'f8\'b1\'f0\'a3\'bf
+\f4 \
+22
+\f1 \'a1\'a2
+\f4  ARC
+\f1 \'cf\'c2\'c8\'e7\'ba\'ce\'b4\'a6\'c0\'ed\'c4\'da\'b4\'e6\'ce\'ca\'cc\'e2\'a3\'bf
+\f4 ARC
+\f1 \'ba\'cd
+\f4 MRC
+\f1 \'d6\'ae\'bc\'e4\'b5\'c4\'c7\'f8\'b1\'f0\'a3\'bf\'c8\'e7\'ba\'ce\'b4\'a6\'c0\'ed\'c4\'da\'b4\'e6\'be\'af\'b8\'e6\'a3\'bf
+\f4  \
+22
+\f1 \'a1\'a2
+\f4 ARC
+\f1 \'b2\'bb\'ca\'c7\'d4\'da
+\f4 runtime
+\f1 \'b5\'c4\'ca\'b1\'ba\'f2\'d7\'f7\'d3\'c3\'a3\'ac\'b6\'f8\'ca\'c7\'d4\'da\'b1\'e0\'d2\'eb\'c6\'da\'a3\'ac\'cb\'fc\'bb\'e1\'d7\'d4\'b6\'af\'b7\'d6\'ce\'f6\'b6\'d4\'cf\'f3\'b5\'c4\'c9\'fa\'c3\'fc\'d6\'dc\'c6\'da\'a3\'ac\'d4\'da\'ca\'ca\'b5\'b1\'b5\'c4\'ce\'bb\'d6\'c3\'d7\'d4\'b6\'af\'bc\'d3\'c9\'cf
+\f4 [xxx release]
+\f1 \'bb\'f2\'d5\'df
+\f4 [xxx autorelease]
+\f1 \'b5\'c4\'b5\'d7\'b2\'e3\'ca\'b5\'cf\'d6\'b7\'bd\'b7\'a8\'a3\'ac\'d2\'f2\'ce\'aa\'ca\'c7\'d6\'b1\'bd\'d3\'b5\'f7\'d3\'c3
+\f4 release
+\f1 \'ba\'cd
+\f4 autorelease
+\f1 \'b5\'c4\'b5\'d7\'b2\'e3
+\f4 C
+\f1 \'ca\'b5\'cf\'d6\'a3\'ac\'cb\'f9\'d2\'d4\'d4\'da\'d0\'a7\'c2\'ca\'c9\'cf\'b8\'df\'d3\'da
+\f4 MRC
+\f1 \'a1\'a3\
+\
+\
+\
+\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f2\fs36 \cf12 \kerning1\expnd0\expndtw0 \CocoaLigature0 UIImage\cf0  *image=\cf9 ImageNamed\cf0 (\cf16 @"LBMyInfo.bundle/test.png"\cf0 );\
+    \cf12 NSData\cf0  *imageData=\cf4 UIImageJPEGRepresentation\cf0 (image, \cf30 1\cf0 );\
+    \cf12 NSBundle\cf0  *bundle=[\cf12 NSBundle\cf0  \cf4 bundleWithIdentifier\cf0 :\cf16 @"LBMyInfo"\cf0 ];\
+    \cf12 NSString\cf0  *path=[[\cf12 NSBundle\cf0  \cf4 mainBundle\cf0 ] \cf4 pathForResource\cf0 :\cf16 @"xiaoai"\cf0  \cf4 ofType\cf0 :\cf16 @"zip"\cf0 ];\
+    \cf12 NSData\cf0  *data=[\cf12 NSData\cf0  \cf4 dataWithContentsOfFile\cf0 :path];\
+    \cf12 NSDateFormatter\cf0  *formatter=[[\cf12 NSDateFormatter\cf0  \cf4 alloc\cf0 ] \cf4 init\cf0 ];\
+    formatter.\cf3 dateFormat\cf0 =\cf16 @"yyyyMMddHHmmss"\cf0 ;\
+    \cf12 NSString\cf0  *fileName=[formatter \cf4 stringFromDate\cf0 :[\cf12 NSDate\cf0  \cf4 date\cf0 ]];\
+    [\cf31 LBHttpUtils\cf0  \cf32 upLoadUrlString\cf0 :\cf16 @"http://www.51work6.com/service/mynotes/WebService.php"\cf0  \cf32 params\cf0 :\cf30 @\{\cf16 @"email"\cf0 :\cf16 @"liu_bin_home@163.com"\cf30 \}\cf0  \cf32 imageData\cf0 :data \cf32 imageName\cf0 :\cf16 @"zip1"\cf0  \cf32 fileName\cf0 :[\cf12 NSString\cf0  \cf4 stringWithFormat\cf0 :\cf16 @"%@.zip"\cf0 ,fileName] \cf32 fileType\cf0 :\cf16 @"file/zip"\cf0  \cf32 uploadProgressBlock\cf0 :^(\cf12 NSProgress\cf0  *uploadProgress) \{\
+        \cf4 NSLog\cf0 (\cf16 @"progress %lld -- %lld "\cf0 ,uploadProgress.\cf3 completedUnitCount\cf0 ,uploadProgress.\cf3 totalUnitCount\cf0 );\
+    \} \cf32 sucessBlock\cf0 :^(\cf12 NSURLSessionDataTask\cf0  *task, \cf11 id\cf0  responseObject) \{\
+        \cf4 NSLog\cf0 (\cf16 @"responseObject is %@ "\cf0 ,responseObject);\
+    \} \cf32 errorBlock\cf0 :^(\cf12 NSURLSessionDataTask\cf0  *task, \cf12 NSError\cf0  *error) \{\
+        \cf4 NSLog\cf0 (\cf16 @"error is %@ "\cf0 ,error);\
+    \}];}

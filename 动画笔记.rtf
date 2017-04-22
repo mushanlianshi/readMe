@@ -1,0 +1,73 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red77\green0\blue158;\red46\green13\blue110;\red0\green11\blue255;
+\red32\green60\blue63;\red48\green111\blue121;\red68\green137\blue147;\red180\green0\blue98;\red92\green38\blue153;
+\red100\green56\blue32;\red29\green133\blue25;\red186\green0\blue17;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww26380\viewh8880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 SDWebImage 
+\f1 \'b8\'df\'c7\'e5\'cd\'bc\'c6\'ac\'bd\'e2\'d1\'b9\'cb\'f5\'bb\'e1\'b5\'bc\'d6\'c2\'c4\'da\'b4\'e6\'b1\'a9\'d4\'f6\'a3\'ac\'c9\'e8\'d6\'c3\'bd\'e2\'d1\'b9\'cb\'f5\'ce\'aa
+\f0 NO
+\f1 \'b5\'b1\'d3\'d0\'d0\'a9\'b8\'df\'c7\'e5\'b5\'c4\'cd\'bc\'c6\'ac\'b5\'c4\'ca\'b1\'ba\'f2\
+\
+\
+\'b6\'af\'bb\'ad\'b7\'bd\'b7\'a81 \'a3\'ba\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+
+\f2\fs36 \cf0 \CocoaLigature0 [\cf2 UIView\cf0  \cf3 animateWithDuration\cf0 :\cf4 2\cf0  \cf3 delay\cf0 :\cf4 0\cf0  \cf3 usingSpringWithDamping\cf0 :\cf4 0.3\cf0  \cf3 initialSpringVelocity\cf0 :\cf4 0\cf0  \cf3 options\cf0 :\cf3 UIViewAnimationOptionTransitionNone\cf0  \cf3 animations\cf0 :^\{\
+        [button \cf3 layoutIfNeeded\cf0 ];\
+        [button \cf5 mas_makeConstraints\cf0 :^(\cf6 MASConstraintMaker\cf0  *make) \{\
+            make.\cf7 right\cf0 .\cf5 equalTo\cf0 (\cf8 self\cf0 .\cf9 view\cf0 ).\cf5 offset\cf0 (-\cf4 5\cf0 );\
+            make.\cf7 top\cf0 .\cf5 equalTo\cf0 (\cf8 self\cf0 .\cf9 view\cf0 ).\cf5 offset\cf0 (\cf4 70\cf0 );\
+            make.\cf7 width\cf0 .\cf10 mas_equalTo\cf0 (\cf4 50\cf0 );\
+            make.\cf7 height\cf0 .\cf10 mas_equalTo\cf0 (\cf4 30\cf0 );\
+        \}];\
+    \} \cf3 completion\cf0 :\cf8 nil\cf0 ];\
+\
+2 
+\f1 \'d3\'c3
+\f2 layer
+\f1 \'bc\'d3\'b6\'af\'bb\'ad\'b5\'c4
+\f2  \
+\
+\cf11 //
+\f1 \cf11 \'bf\'aa\'ca\'bc\'b5\'c4
+\f2 \cf11 path\cf0 \
+    \cf2 UIBezierPath\cf0  *beginPath = [\cf2 UIBezierPath\cf0  \cf3 bezierPathWithRoundedRect\cf0 :\cf3 CGRectMake\cf0 (\cf8 self\cf0 .\cf7 width\cf0 , \cf8 self\cf0 .\cf7 height\cf0 /\cf4 2.0\cf0 -height/\cf4 2.0\cf0 , \cf4 0\cf0 , height) \cf3 byRoundingCorners\cf0 :corner \cf3 cornerRadii\cf0 :\cf3 CGSizeMake\cf0 (\cf4 5.f\cf0 , \cf4 5.f\cf0 )];\
+    \cf2 UIBezierPath\cf0  *endPath = [\cf2 UIBezierPath\cf0  \cf3 bezierPathWithRoundedRect\cf0 :\cf3 CGRectMake\cf0 (\cf8 self\cf0 .\cf7 width\cf0  - \cf8 self\cf0 .\cf7 width\cf0 *rightScale, \cf8 self\cf0 .\cf7 height\cf0 /\cf4 2.0\cf0 -height/\cf4 2.0\cf0 , \cf8 self\cf0 .\cf7 width\cf0 *rightScale, height) \cf3 byRoundingCorners\cf0 :corner \cf3 cornerRadii\cf0 :\cf3 CGSizeMake\cf0 (\cf4 5.f\cf0 , \cf4 5.f\cf0 )];\
+    \
+    \cf9 CGFloat\cf0  duration = \cf4 0.8\cf0 ;\
+\cf11 //    [self performSelector:@selector(showLeftAndRightLabel) withObject:nil afterDelay:duration];\cf0 \
+    \
+    \cf2 CABasicAnimation\cf0  *animation = [\cf2 CABasicAnimation\cf0  \cf3 animationWithKeyPath\cf0 :\cf12 @"path"\cf0 ];\
+    animation.\cf9 removedOnCompletion\cf0  = \cf8 NO\cf0 ;\
+    animation.\cf9 fillMode\cf0  = \cf9 kCAFillModeForwards\cf0 ;\
+    animation.\cf9 duration\cf0  = duration;\
+    animation.\cf9 fromValue\cf0  = (\cf8 __bridge\cf0  \cf8 id\cf0  \cf8 _Nullable\cf0 )beginPath.\cf9 CGPath\cf0 ;\
+    animation.\cf9 toValue\cf0  = (\cf8 __bridge\cf0  \cf8 id\cf0  \cf8 _Nullable\cf0 )endPath.\cf9 CGPath\cf0 ;\
+    [\cf8 self\cf0 .\cf7 rightLayer\cf0  \cf3 addAnimation\cf0 :animation \cf3 forKey\cf0 :\cf12 @"rightLayerAnimation"\cf0 ];\
+\
+3 \cf2 CABasicAnimation\cf0  *animation = [\cf2 CABasicAnimation\cf0  \cf3 animationWithKeyPath\cf0 :\cf12 @"transform.scale"\cf0 ];\
+    animation.\cf9 fromValue\cf0  = \cf4 @(0.5)\cf0 ;\
+    animation.\cf9 toValue\cf0  = \cf4 @(1.0)\cf0 ;\
+    animation.\cf9 duration\cf0  = \cf4 0.3f\cf0 ;\
+    animation.\cf9 timingFunction\cf0  = [\cf2 CAMediaTimingFunction\cf0  \cf3 functionWithName\cf0 :\cf9 kCAMediaTimingFunctionEaseInEaseOut\cf0 ];\
+    [\cf8 self\cf0 .\cf7 leftLabel\cf0 .\cf9 layer\cf0  \cf3 addAnimation\cf0 :animation \cf3 forKey\cf0 :\cf12 @"leftLabelAnimation"\cf0 ];\
+    [\cf8 self\cf0 .\cf7 rightLabel\cf0 .\cf9 layer\cf0  \cf3 addAnimation\cf0 :animation \cf3 forKey\cf0 :\cf12 @"rightLabelAnimation"\cf0 ];\
+\
+label.\cf7 y\cf0  = button.\cf7 y\cf0  -\cf4 20\cf0 ;\
+    label.\cf9 transform\cf0  =\cf3 CGAffineTransformMakeScale\cf0 (\cf4 0.2\cf0 , \cf4 0.2\cf0 );\
+    label.\cf9 alpha\cf0  = \cf4 0.0\cf0 ;\
+    \
+    \cf11 //+1
+\f1 \cf11 \'cf\'d4\'ca\'be\'b5\'c4\'b6\'af\'bb\'ad
+\f2 \cf0 \
+    [\cf2 UIView\cf0  \cf3 animateWithDuration\cf0 :\cf4 0.2\cf0  \cf3 animations\cf0 :^\{\
+        label.\cf9 transform\cf0  = \cf3 CGAffineTransformMakeScale\cf0 (\cf4 1.2\cf0 , \cf4 1.2\cf0 );\
+        label.\cf9 alpha\cf0  = \cf4 1.0\cf0 ;\
+    \} \cf3 completion\cf0 :^(\cf8 BOOL\cf0  finished) \{\
+        \cf3 NSLog\cf0 (\cf12 @"animation thread is %@ "\cf0 ,[\cf2 NSThread\cf0  \cf3 currentThread\cf0 ]);\
+        [label \cf3 removeFromSuperview\cf0 ];\
+    \}];}
